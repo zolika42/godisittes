@@ -174,11 +174,16 @@ blockquote p strong {
     background-color: var(--color-black);
 }
 
+main {
+    margin-block-end: 1rem;
+}
+
 main h2,
 .faq h4,
 #contact h2 {
     align-self: center;
     margin-top: -3.75rem;
+    margin-bottom: 10rem;
     padding: 0.25em 0.5em;
     color: var(--color-white);
     font-weight: var(--font-weight-bold);
@@ -252,6 +257,7 @@ aside,
     article,
     .page-footer {
         padding: 1rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -745,24 +751,39 @@ form button:hover {
     cursor: pointer;
 }
 
+#dzsoni-sticky-services {
+    left: calc(100% - 300px);
+    bottom: 10%;
+}
+
 #dzsoni-sticky-prices {
-    left: calc(100% - 390px);
+    left: calc(100% - 320px);
+    bottom: 50%;
+}
+
+div#dzsoni-sticky-about {
+    left: calc(100% - 320px);
+    bottom: 70%;
 }
 
 div#dzsoni-sticky-why-us {
-    top: 135px;
-}
-
-div#dzsoni-sticky-contact {
-    top: 230px;
+    top: 40%;
+    left: calc(100% - 320px);
 }
 
 div#dzsoni-sticky-faq {
-    top: 50px;
+    top: -15%;
+    left: calc(100% - 308px);
 }
 
 div#dzsoni-sticky-impressum {
-    top: 210px;
+    top: -15%;
+    left: calc(100% - 310px);
+}
+
+div#dzsoni-sticky-contact {
+    top: -15%;
+    left: calc(100% - 250px);
 }
 
 .dzsoni-in-da-house {
@@ -787,6 +808,32 @@ div#dzsoni-sticky-impressum {
     cursor: pointer;
 }
 
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 30%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid #fffbea; /* a buborék háttérszíne */
+    z-index: 9;
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    right: -23px;
+    top: 30%;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left: 23px solid #000; /* a buborék keretszíne */
+    z-index: 8;
+}
+
 .speech-bubble {
     position: absolute;
     top: 3.5rem;
@@ -804,20 +851,48 @@ div#dzsoni-sticky-impressum {
     display: none;
 }
 
-@media (max-width: 768px) {
+div.dzsoni-in-da-house,
+div.dzsoni-in-da-house:hover {
+    position: absolute;
+    bottom: 100%;
+    transform: translateY(30%);
+    margin-bottom: -150px;
+    top: -40%;
+    left: 80%;
+}
+
+div.dzsoni-in-da-house:hover {
+    rotate: -5deg;
+}
+
+@media (max-width: 1024px) {
     .dzsoni-in-da-house, #dzsoni-sticky-prices {
-        width: 200px;
-        transform: translate(20%, -20%);
-        top: 25px;
-        left: calc(100% - 228px);
+        position: relative !important;
+        left: unset !important;
+        bottom: unset !important;
+        margin: 0 auto 0 auto;
+        z-index: unset !important;
+        transform: unset !important;
+        margin-bottom: unset !important;
+    }
+
+    #dzsoni-sticky-contact {
+        top: 45px !important;
+    }
+
+    #dzsoni-sticky-impressum {
+        top: 80px !important;
+    }
+
+    main h2, .faq h4, #contact h2 {
+        margin-bottom: 1rem !important;
+    }
+
+    .speech-bubble {
+        top: -3.5rem;
     }
 }
 
-@media (max-width: 480px) {
-    .dzsoni-in-da-house, #dzsoni-sticky-prices {
-        width: 130px;
-        transform: translate(20%, -20%);
-        top: 25px;
-        left: calc(100% - 158px);
-    }
+aside, article {
+    position: relative;
 }
