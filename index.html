@@ -7,7 +7,7 @@
     <title data-i18n="page_title">Gödi Sittes – Lebuktatjuk a szemetet</title>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;display=swap"
           rel="stylesheet"/>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="/style.min.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <a class="skip-link" data-i18n="skip_to_main_content" href="#main">Skip to main content</a>
@@ -17,12 +17,16 @@
             <h1 data-i18n="site_name">Gödi Sittes</h1>
             <h2 data-i18n="site_subtitle">Göd legkeményebb sittese</h2>
             <slogan data-i18n="site_slogan">Nálunk minden szemét lebukik</slogan>
+            <div class="language-switcher">
+                <button id="lang-hu" aria-label="Magyar">🇭🇺 HU</button>
+                <button id="lang-en" aria-label="English">🇬🇧 EN</button>
+            </div>
         </a>
     </div>
 </header>
 <nav>
     <div id="dzsoni-sticky">
-        <img alt="Zsákos Dzsoni figyel" src="images/zsakos_dzsoni.png"/>
+        <img alt="Zsákos Dzsoni figyel" src="/images/zsakos_dzsoni.png"/>
     </div>
     <ul>
         <li><a href="#services" data-i18n="menu_jobs" data-tooltip="Szolgáltatások">Melók</a></li>
@@ -37,7 +41,7 @@
     <div class="container">
         <article id="services">
             <div class="dzsoni-in-da-house" id="dzsoni-sticky-services">
-                <img alt="Zsákos Dzsoni Szolgáltatásai" src="images/zsakos_dzsoni_services.png"/>
+                <img alt="Zsákos Dzsoni Szolgáltatásai" src="/images/zsakos_dzsoni_services.png"/>
             </div>
             <section class="container">
                 <h2 data-i18n="section_services">Szolgáltatások</h2>
@@ -94,7 +98,7 @@
         </article>
         <article id="prices">
             <div class="dzsoni-in-da-house" id="dzsoni-sticky-prices">
-                <img alt="Zsákos Dzsoni Árlista" src="images/zsakos_dzsoni_prices.png" />
+                <img alt="Zsákos Dzsoni Árlista" src="/images/zsakos_dzsoni_prices.png" />
             </div>
             <section class="container">
                 <h2 data-i18n="section_prices">Áraink</h2>
@@ -135,7 +139,7 @@
         </article>
         <article id="about">
             <div class="dzsoni-in-da-house" id="dzsoni-sticky-about">
-                <img alt="Zsákos Dzsoni Rólunk" src="images/zsakos_dzsoni_about.png" />
+                <img alt="Zsákos Dzsoni Rólunk" src="/images/zsakos_dzsoni_about.png" />
             </div>
 
             <section class="container">
@@ -164,7 +168,7 @@
             </section>
 
             <div class="dzsoni-in-da-house" id="dzsoni-sticky-why-us">
-                <img alt="Zsákos Dzsoni Miért minkek válassz?" src="images/zsakos_dzsoni_why_us.png" />
+                <img alt="Zsákos Dzsoni Miért minkek válassz?" src="/images/zsakos_dzsoni_why_us.png" />
             </div>
 
             <section class="container">
@@ -190,7 +194,7 @@
 </main>
 <aside id="contact">
     <div class="dzsoni-in-da-house" id="dzsoni-sticky-contact">
-        <img alt="Zsákos Dzsoni Kapcsolat" src="images/zsakos_dzsoni_contact.png" />
+        <img alt="Zsákos Dzsoni Kapcsolat" src="/images/zsakos_dzsoni_contact.png" />
     </div>
 
     <div class="container">
@@ -235,7 +239,7 @@
 </aside>
 <article aria-labelledby="faq-title" class="faq" id="faq">
     <div class="dzsoni-in-da-house" id="dzsoni-sticky-faq">
-        <img alt="Zsákos Dzsoni Gyarkan Ismételt Kérdések" src="images/zsakos_dzsoni_faq.png" />
+        <img alt="Zsákos Dzsoni Gyarkan Ismételt Kérdések" src="/images/zsakos_dzsoni_faq.png" />
     </div>
     <div class="container">
         <h2 data-i18n="section_faq">Gyakran Ismételt Kérdések</h2>
@@ -290,7 +294,7 @@
 </article>
 <article aria-labelledby="impressum-title" class="impressum faq" id="impressum">
     <div class="dzsoni-in-da-house" id="dzsoni-sticky-impressum">
-        <img alt="Zsákos Dzsoni Impresszum" src="images/zsakos_dzsoni_impress.png" />
+        <img alt="Zsákos Dzsoni Impresszum" src="/images/zsakos_dzsoni_impress.png" />
     </div>
     <div class="container">
         <h2 data-i18n="section_impressum">Impresszum</h2>
@@ -334,9 +338,7 @@
         </p>
     </div>
 </footer>
-<!-- Szövegbuborék szkriptek -->
-<script src="speechtexts.js"></script>
-<script src="translations.js"></script>
-<script src="script.js"></script>
+<script src="/translations.min.js"></script>
+<script src="/script.min.js"></script>
 </body>
 </html>

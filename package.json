@@ -1,0 +1,27 @@
+{
+  "name": "godisittes",
+  "version": "1.0.0",
+  "main": "deploy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zolika42/godisittes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zolika42/godisittes/issues"
+  },
+  "homepage": "https://github.com/zolika42/godisittes#readme",
+  "description": "",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "csso": "^5.0.5",
+    "jsdom": "^26.1.0",
+    "table": "^6.9.0",
+    "terser": "^5.43.1"
+  }
+}
