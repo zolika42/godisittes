@@ -158,6 +158,7 @@ for (const htmlFile of htmlFiles) {
         // Linkek átírása
         doc.querySelectorAll("a[href]").forEach((a) => {
             const href = a.getAttribute("href");
+            if (a.closest(".language-switcher")) return;
             if (
                 href.startsWith("/") &&
                 !href.startsWith(`/${lang}/`) &&
