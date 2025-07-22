@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     attachDzsoniSpeech(); // automatikus minden dzsoni-sticky elemhez
 
-    const supported = ['en', 'hu', 'de'];
+    const supported = ['en', 'hu', 'de', 'fr', 'nl', 'es'];
     const savedLang = localStorage.getItem('lang');
     const parts = window.location.pathname.split('/');
     const currentLang = parts[1]; // e.g., 'en' from /en/index.html
