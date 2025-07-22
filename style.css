@@ -149,24 +149,28 @@ header div.container a {
 }
 
 .language-switcher {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 100;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
-.language-switcher button {
-    background: none;
-    border: 1px solid #ccc;
-    margin-left: 5px;
-    padding: 4px 8px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: all 0.2s ease;
+.lang-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
 }
 
-.language-switcher button:hover {
+.lang-button:hover {
+    border-color: #000;
     background-color: #eee;
 }
 
