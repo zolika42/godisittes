@@ -1,23 +1,23 @@
 RewriteEngine On
-# Alapértelmezett nyelvre irányítás, ha nincs nyelvi útvonal
+# Set default language
 RewriteCond %{REQUEST_URI} ^/$
 RewriteCond %{ENV:lang} !^$
 RewriteRule ^$ %{ENV:lang}/ [R=302,L]
 RewriteBase /
 
-# Támogatott nyelvek
+# Supported languages
 SetEnvIf Accept-Language ^en lang=en
 SetEnvIf Accept-Language ^de lang=de
 
 # Fallback, ha semmi sem egyezik
 SetEnvIf lang ^$ lang=hu
 
-# Ha nem nyelvi útvonalon érkezik kérés és .html fájl
+# If no language route
 RewriteCond %{REQUEST_URI} !^/(en|hu|de)/
 RewriteCond %{REQUEST_URI} \.html$ [NC]
 RewriteRule ^(.*\.html)$ %{ENV:lang}/$1 [R=302,L]
 
-# Tartalomtípus megadása
+# Add content type
 <FilesMatch "\.html$">
   Header set Content-Type "text/html; charset=UTF-8"
 </FilesMatch>
