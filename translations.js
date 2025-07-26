@@ -752,21 +752,33 @@ const dzsoniSpeechTexts = {
         ]
     },
     menu_jobs: {
-        hu: ["Munkáink"]
+        hu: ["Munkáink"],
+        en: ["Jobs"],
+        de: ["Arbeiten"]
     },
     menu_money: {
-        hu: ["Áraink"]
+        hu: ["Áraink"],
+        en: ["Prices"],
+        de: ["Preise"]
     },
     menu_about: {
-        hu: ["Rólunk"]
+        hu: ["Rólunk"],
+        en: ["About us"],
+        de: ["Über uns"]
     },
     menu_contact: {
-        hu: ["Kapcsolat"]
+        hu: ["Kapcsolat"],
+        en: ["Contact"],
+        de: ["Kontakt"]
     },
     menu_faq: {
-        hu: ["Gyakran Ismételt Kérdések"]
+        hu: ["Gyakran Ismételt Kérdések"],
+        en: ["FAQ"],
+        de: ["FAQ"]
     },
     menu_legal: {
-        hu: ["Jogi dokumentumok"]
-    },
+        hu: ["Jogi dokumentumok"],
+        en: ["Legal documents"],
+        de: ["Rechtliche Dokumente"]
+    }
 };
