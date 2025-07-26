@@ -228,6 +228,10 @@ main h2,
     text-align: center;
 }
 
+main.blog h2 {
+    margin-bottom: 1.5rem;
+}
+
 article .container > ul:not(.features) > li + li,
 article .container > ol > li + li {
     margin-top: 1rem;
@@ -814,6 +818,11 @@ div#dzsoni-sticky-contact {
     left: calc(100% - 250px);
 }
 
+div#dzsoni-sticky-blog {
+    top: 0;
+    left: 95%;
+}
+
 .dzsoni-in-da-house {
     position: relative;
     transform: translate(30%, -30%);
@@ -1087,4 +1096,8 @@ aside, article {
     .fixed-desktop-cta {
         display: inline-block;
     }
+}
+
+main.blog blockquote {
+    width: 100%;
 }

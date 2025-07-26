@@ -811,6 +811,28 @@ const dzsoniSpeechTexts = {
             "Formular ist da – der Einsatz läuft. Bald klingelt’s!",
             "Der Boss ist zufrieden, du auch – und der Müll zittert!"
         ]
+    },
+    blog: {
+        hu: [
+            "Írás közben se pihen a sittkommandó!",
+            "Dzsoni blogol, te meg tanulsz. Így megy ez.",
+            "Nem csak pakolni tudunk, de írni is, haver!",
+            "Ez nem mese – ez a sittes valóság!",
+            "A sztorik kemények, mint a meló – olvasd csak!"
+        ],
+        en: [
+            "Even while blogging, the junk squad’s on duty!",
+            "Dzsoni writes, you learn. That’s how it goes.",
+            "We don’t just haul – we write too, buddy!",
+            "No fairy tales here – just junkyard truth!",
+            "The stories hit hard – just like our work!"
+        ],
+        de: [
+            "Auch beim Bloggen ist der Sitt-Trupp bereit!",
+            "Dzsoni schreibt, du lernst – so läuft das.",
+            "Wir schleppen nicht nur – wir schreiben auch!",
+            "Keine Märchen – nur echte Knast-Geschichten!",
+            "Die Stories knallen – wie unsere Arbeit!"
+        ]
     }
-
 };

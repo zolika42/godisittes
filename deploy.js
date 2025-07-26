@@ -99,8 +99,9 @@ if (fs.existsSync("images")) {
 }
 
 // 9. HTML fájlok feldolgozása
-const htmlFiles = fs.readdirSync(".").filter(file => file.endsWith(".html"));
-const missingTranslationTable = [];
+const rootHtmlFiles = fs.readdirSync(".").filter(file => file.endsWith(".html"));
+const blogHtmlFiles = fs.existsSync("blog") ? fs.readdirSync("blog").filter(file => file.endsWith(".html")).map(file => `blog/${file}`) : [];
+const htmlFiles = [...rootHtmlFiles, ...blogHtmlFiles];const missingTranslationTable = [];
 
 for (const htmlFile of htmlFiles) {
     const htmlContent = fs.readFileSync(htmlFile, "utf-8");
