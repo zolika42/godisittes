@@ -117,9 +117,6 @@ module.exports = {
         no_container_needed: "Nem kell hozzá konténer, engedély, sem várakozás.",
         reachable_by_phone: "Elérhetőek vagyunk telefonon, nem csak űrlapon keresztül.",
         fast_service: "Ha kell, holnap már ott vagyunk nálad.",
-        downloads_heading: "Letölthető anyagok",
-        price_list_pdf: "Árlista (PDF)",
-        legal_documents_pdf: "Összes jogi dokumentum (PDF)",
 
         // Contact
         section_contact: "Kapcsolat",
@@ -312,9 +309,6 @@ module.exports = {
         no_container_needed: "No need for a container, permit, or waiting.",
         reachable_by_phone: "You can reach us by phone, not just via forms.",
         fast_service: "If needed, we’ll be there tomorrow.",
-        downloads_heading: "Downloads",
-        price_list_pdf: "Price list (PDF)",
-        legal_documents_pdf: "All legal documents (PDF)",
 
         // Contact
         section_contact: "Contact",
@@ -505,9 +499,6 @@ module.exports = {
         no_container_needed: "Kein Container, keine Genehmigung, keine Wartezeit nötig.",
         reachable_by_phone: "Erreichbar per Telefon, nicht nur per Formular.",
         fast_service: "Wenn nötig, sind wir morgen bei dir.",
-        downloads_heading: "Download-Bereich",
-        price_list_pdf: "Preisliste (PDF)",
-        legal_documents_pdf: "Alle rechtlichen Dokumente (PDF)",
 
         // Contact
         section_contact: "Kontakt",
