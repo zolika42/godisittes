@@ -190,7 +190,12 @@ module.exports = {
         footer_tax_registry: "Adószám: 8434312506",
         footer_impressum: "Impresszum",
         footer_privacy: "Adatvédelem",
-        footer_terms: "ÁSZF"
+        footer_terms: "ÁSZF",
+
+        // Thanks
+        page_title_thanks: "Köszi, tesó! 🙏 - Gödi Sittes",
+        section_thanks: "Köszi, tesó! 🙏",
+        thanks_text: "Megkaptuk az üzenetedet! Zsákos Dzsoni már pakolja a cuccot, hamarosan csörögni fogunk.<br /><br />Addig is dőlj hátra, a sittel mi elbánunk. 💪"
     },
     en: {
         // Header
@@ -380,7 +385,12 @@ module.exports = {
         footer_tax_registry: "Tax ID: 8434312506",
         footer_impressum: "Imprint",
         footer_privacy: "Privacy",
-        footer_terms: "Terms"
+        footer_terms: "Terms",
+
+        // Thanks
+        page_title_thanks: "Thanks, bro! 🙏 - Gödi Sittes",
+        section_thanks: "Thanks, bro! 🙏",
+        thanks_text: "We’ve got your message! Zsákos Dzsoni is already loading up – we’ll call you soon.<br /><br />In the meantime, kick back – we’ll handle the junk. 💪"
     },
     de: {
         // Header
@@ -569,7 +579,12 @@ module.exports = {
         footer_tax_registry: "USt-ID: 8434312506",
         footer_impressum: "Impressum",
         footer_privacy: "Datenschutz",
-        footer_terms: "AGB"
+        footer_terms: "AGB",
+
+        // Thanks
+        page_title_thanks: "Danke, Bruder! 🙏 - Gödi Sittes",
+        section_thanks: "Danke, Bruder! 🙏",
+        thanks_text: "Wir haben deine Nachricht! Zsákos Dzsoni packt schon – bald klingelt dein Handy.<br /><br />Lehn dich zurück, wir kümmern uns um den Schutt. 💪"
     }
 };
 
@@ -779,5 +794,29 @@ const dzsoniSpeechTexts = {
         hu: ["Jogi dokumentumok"],
         en: ["Legal documents"],
         de: ["Rechtliche Dokumente"]
+    },
+    thankyou: {
+        hu: [
+            "Pipa! Kitöltötted, megköszönted – most mi jövünk!",
+            "Dzsoni látja, Dzsoni pacsizik – köszi a bizalmat!",
+            "A szemét menni fog, mint a karikacsapás, haver!",
+            "Űrlap kész, sztori indul – nemsokára csörög a sittkommandó.",
+            "A Főnök örül, te is örülsz – a sitt meg már reszket!"
+        ],
+        en: [
+            "Boom! You filled it out – now it’s our turn!",
+            "Dzsoni saw it, Dzsoni salutes – thanks for trusting us!",
+            "Trash will fly out faster than a prison rumor!",
+            "Form's in, action's coming – expect the junk crew soon!",
+            "The boss is pleased. You should be too. Junk's already shaking!"
+        ],
+        de: [
+            "Zack! Formular ausgefüllt – jetzt sind wir dran!",
+            "Dzsoni sieht's, Dzsoni klatscht ab – danke fürs Vertrauen!",
+            "Der Müll fliegt raus schneller als ein Knast-Gerücht!",
+            "Formular ist da – der Einsatz läuft. Bald klingelt’s!",
+            "Der Boss ist zufrieden, du auch – und der Müll zittert!"
+        ]
     }
+
 };
