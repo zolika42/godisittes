@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
     translatePage(currentLang || savedLang || detectBrowserLanguage());
 });
 
+window.addEventListener('load', initAutocomplete);
+
 // A szövegobjektumot a speechtexts.js tölti be globálisan dzsoniSpeechTexts néven
 
 function attachDzsoniSpeech(manualId = null, manualKey = null, lang = 'hu') {
@@ -45,6 +47,7 @@ function attachDzsoniSpeech(manualId = null, manualKey = null, lang = 'hu') {
     }
 
     targets.forEach(({ id, key }) => {
+        const currentLang = document.documentElement.lang || lang;
         const dzsoni = document.getElementById(id);
         if (!dzsoni) return;
 
@@ -53,10 +56,11 @@ function attachDzsoniSpeech(manualId = null, manualKey = null, lang = 'hu') {
 
         const bubble = document.createElement("div");
         bubble.classList.add("speech-bubble");
+        bubble.textContent = translations[lang]?.[key] || key;
+
         dzsoni.appendChild(bubble);
 
         dzsoni.addEventListener("mouseenter", () => {
-            const currentLang = document.documentElement.lang || lang;
             const messages = dzsoniSpeechTexts[key] && dzsoniSpeechTexts[key][currentLang];
             if (!messages || !messages.length) {
                 bubble.textContent = `[${key} (${currentLang})] nincs szöveg`;
@@ -92,4 +96,14 @@ function detectBrowserLanguage() {
     const supported = Object.keys(translations);
     const browserLang = navigator.language.slice(0, 2).toLowerCase();
     return supported.includes(browserLang) ? browserLang : 'en';
+}
+
+function initAutocomplete() {
+    const addressInput = document.getElementById('address');
+    if (addressInput) {
+        new google.maps.places.Autocomplete(addressInput, {
+            types: ["geocode"],
+            componentRestrictions: { country: "hu" },
+        });
+    }
 }

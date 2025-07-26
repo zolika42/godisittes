@@ -2,12 +2,36 @@
 <html lang="hu"><head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Meta SEO -->
+    <meta name="description" content="Sittszállítás, lomtalanítás, szóródó anyag fuvar Gödön és környékén. Konténer nélkül, gyorsan, hivatalos számlával.">
+    <meta name="keywords" content="sittszállítás, lomtalanítás, göd, zsákos sitt, hulladék fuvar, sitt konténer nélkül, gödi sittes">
+    <meta name="author" content="BeyondStart Solutions SRL">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gödi Sittes – Zsákos Dzsoni sittszállítás">
+    <meta property="og:description" content="Sitt, lom, sóder, minden megy, amit Zsákos Dzsoni elvisz! Hivatalos, gyors, számlaképes sittszállítás Gödön és környékén.">
+    <meta property="og:image" content="https://godisittes.hu/images/og-image.jpg">
+    <meta property="og:url" content="https://godisittes.hu/">
+    <meta property="og:type" content="website">
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://godisittes.hu/hu/index.html">
+    <link rel="alternate" hreflang="hu" href="https://godisittes.hu/hu">
+    <link rel="alternate" hreflang="en" href="https://godisittes.hu/en">
+    <link rel="alternate" hreflang="de" href="https://godisittes.hu/de">
+
     <title data-i18n="page_title">Gödi Sittes – Lebuktatjuk a szemetet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtA3tWXjkoP4bHuYBYZqZSrwahFRy3gbE&amp;libraries=places"></script>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;display=swap"></noscript>
+    <link rel="preload" href="/images/zsakos_dzsoni.png" as="image">
     <link href="/style.min.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-<a class="skip-link" data-i18n="skip_to_main_content" href="#main">Skip to main content</a>
+<a class="skip-link" data-i18n="skip_to_main_content" href="#main">Ugrás a fő tartalomra</a>
 <header>
     <div class="container">
         <a href="/hu/">
@@ -24,61 +48,67 @@
 </header>
 <nav>
     <div id="dzsoni-sticky">
-        <img alt="Zsákos Dzsoni figyel" src="/images/zsakos_dzsoni.png">
+        <img alt="Zsákos Dzsoni figyel" src="/images/zsakos_dzsoni.png" loading="lazy">
     </div>
     <ul>
-        <li><a href="#services" data-i18n="menu_jobs" data-tooltip="Szolgáltatások">Melók</a></li>
-        <li><a href="#prices" data-i18n="menu_money" data-tooltip="Árak">Della</a></li>
-        <li><a href="#about" data-i18n="menu_about" data-tooltip="Rólunk">Brancs</a></li>
-        <li><a href="#contact" data-i18n="menu_contact" data-tooltip="Kapcsolat">Dobd a csörgőt</a></li>
-        <li><a href="#faq" data-i18n="menu_faq" data-tooltip="GYIK">Kérdezz, tesó!</a></li>
-        <li><a href="#impressum" data-i18n="menu_legal" data-tooltip="Jogi nyilatkozatok">Zárkajog</a></li>
+        <li id="dzsoni-sticky-menu_jobs"><a href="#services" data-i18n="menu_jobs">Melók</a></li>
+        <li id="dzsoni-sticky-menu_money"><a href="#prices" data-i18n="menu_money">Della</a></li>
+        <li id="dzsoni-sticky-menu_about"><a href="#about" data-i18n="menu_about">Brancs</a></li>
+        <li id="dzsoni-sticky-menu_contact"><a href="#contact" data-i18n="menu_contact">Dobd a csörgőt</a></li>
+        <li id="dzsoni-sticky-menu_faq"><a href="#faq" data-i18n="menu_faq">Kérdezz, tesó!</a></li>
+        <li id="dzsoni-sticky-menu_legal"><a href="#impressum" data-i18n="menu_legal">Zárkajog</a></li>
     </ul>
 </nav>
 <main id="main" tabindex="-1">
     <div class="container">
         <article id="services">
             <div class="dzsoni-in-da-house" id="dzsoni-sticky-services">
-                <img alt="Zsákos Dzsoni Szolgáltatásai" src="/images/zsakos_dzsoni_services.png">
+                <img alt="Zsákos Dzsoni Szolgáltatásai" src="/images/zsakos_dzsoni_services.png" loading="lazy">
             </div>
             <section class="container">
                 <h2 data-i18n="section_services">Szolgáltatások</h2>
-
-                <h3 data-i18n="b2c_heading">🧍 Lakossági ügyfeleknek (B2C)</h3>
                 <ul>
                     <li>
-                        <strong data-i18n="b2c_bagged_waste">Zsákos sittszállítás</strong> – Nincs szükség konténerre, 30 zsákig kényelmes megoldás. Kényelmes, gyors, olcsóbb mint a konténeres!
+                        <strong data-i18n="b2c_bagged_waste">Zsákos sittszállítás</strong>
+                        – <span data-i18n="b2c_bagged_waste_desc">Nincs szükség konténerre, 30 zsákig kényelmes megoldás. Kényelmes, gyors, olcsóbb mint a konténeres!</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2c_junk_removal">Lomtalanítás</strong> – Régi bútor, elromlott háztartási eszköz, szemétkupac? Mi elszállítjuk. Igény esetén rakodással.
+                        <strong data-i18n="b2c_junk_removal">Lomtalanítás</strong>
+                        – <span data-i18n="b2c_junk_removal_desc">Régi bútor, elromlott háztartási eszköz, szemétkupac? Mi elszállítjuk. Igény esetén rakodással.</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2c_bags_provided">Zsák biztosítása</strong> – Kérésre biztosítunk 70 literes erősített zsákokat (+100 Ft/db).
+                        <strong data-i18n="b2c_bags_provided">Zsák biztosítása</strong>
+                        – <span data-i18n="b2c_bags_provided_desc">Kérésre biztosítunk 70 literes erősített zsákokat (+100 Ft/db).</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2c_no_loading_help">Rakodás segéd nélkül</strong> – Te rakod meg, mi elvisszük.
+                        <strong data-i18n="b2c_no_loading_help">Rakodás segéd nélkül</strong>
+                        – <span data-i18n="b2c_no_loading_help_desc">Te rakod meg, mi elvisszük.</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2c_within_30km">30 km-es körzeten belül</strong> – Göd és környéke, beleértve Dunakeszi, Vác, Fót, Veresegyház.
+                        <strong data-i18n="b2c_within_30km">30 km-es körzeten belül</strong>
+                        – <span data-i18n="b2c_within_30km_desc">Göd és környéke, beleértve Dunakeszi, Vác, Fót, Veresegyház.</span>
                     </li>
                 </ul>
-
-                <h3 data-i18n="b2b_heading">🏗️ Cégeknek, kivitelezőknek (B2B)</h3>
                 <ul>
                     <li>
-                        <strong data-i18n="b2b_construction_debris">Építkezési törmelék szállítása</strong> – Beton, tégla, csempe, vakolat, stb. 1–3 m³-ig zsákos megoldással.
+                        <strong data-i18n="b2b_construction_debris">Építkezési törmelék szállítása</strong>
+                        – <span data-i18n="b2b_construction_debris_desc">Beton, tégla, csempe, vakolat, stb. 1–3 m³-ig zsákos megoldással.</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2b_site_transport">Telephelyi fuvarok</strong> – Faanyag, fém, raklapok, könnyűáru szállítása 2m³-ig.
+                        <strong data-i18n="b2b_site_transport">Telephelyi fuvarok</strong>
+                        – <span data-i18n="b2b_site_transport_desc">Faanyag, fém, raklapok, könnyűáru szállítása 2m³-ig.</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2b_frequent_demand">Gyakori szállítási igény</strong> – Havi fix díjas vagy flottakedvezményes együttműködés.
+                        <strong data-i18n="b2b_frequent_demand">Gyakori szállítási igény</strong>
+                        – <span data-i18n="b2b_frequent_demand_desc">Havi fix díjas vagy flottakedvezményes együttműködés.</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2b_invoice">Számlaképes szolgáltatás</strong> – Cégként hivatalos számlát biztosítunk minden szállításról.
+                        <strong data-i18n="b2b_invoice">Számlaképes szolgáltatás</strong>
+                        – <span data-i18n="b2b_invoice_desc">Cégként hivatalos számlát biztosítunk minden szállításról.</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2b_urgent_dispatch">Ad-hoc kiszállás</strong> – Akár 24 órán belül vállalunk sürgős munkát.
+                        <strong data-i18n="b2b_urgent_dispatch">Ad-hoc kiszállás</strong>
+                        – <span data-i18n="b2b_urgent_dispatch_desc">Akár 24 órán belül vállalunk sürgős munkát.</span>
                     </li>
                 </ul>
 
@@ -90,54 +120,105 @@
                 </ul>
 
                 <blockquote>
-                    <p><strong data-i18n="offer_heading">Ajánlatunk:</strong> <span data-i18n="offer_text">Olcsóbb, gyorsabb, rugalmasabb mint a konténer! Hívj minket még ma!</span></p>
+                    <p>
+                        <strong data-i18n="offer_heading">Ajánlatunk:</strong>
+                        <span data-i18n="offer_text">Olcsóbb, gyorsabb, rugalmasabb mint a konténer! Hívj minket még ma!</span>
+                    </p>
                 </blockquote>
             </section>
         </article>
         <article id="prices">
             <div class="dzsoni-in-da-house" id="dzsoni-sticky-prices">
-                <img alt="Zsákos Dzsoni Árlista" src="/images/zsakos_dzsoni_prices.png">
+                <img alt="Zsákos Dzsoni Árlista" src="/images/zsakos_dzsoni_prices.png" loading="lazy">
             </div>
             <section class="container">
                 <h2 data-i18n="section_prices">Áraink</h2>
-
-                <h3 data-i18n="b2c_prices_heading">🧍 Lakossági (B2C) árak</h3>
-                <ul>
-                    <li><strong data-i18n="b2c_1m3">Sittszállítás (1 m³, kb. 30 zsák):</strong> 18 000 Ft (bruttó)</li>
-                    <li><strong data-i18n="b2c_2m3">Sittszállítás (2 m³):</strong> 32 000 Ft (bruttó)</li>
-                    <li><strong data-i18n="b2c_bags">Zsák biztosítása:</strong> +100 Ft / zsák (opcionális)</li>
-                    <li><strong data-i18n="b2c_junk">Lomtalanítás:</strong> 12 000–25 000 Ft, rakodás függvényében</li>
-                    <li><strong data-i18n="b2c_extra_loader">Extra rakodó személy:</strong> +5 000 Ft / fő</li>
-                    <li><strong data-i18n="b2c_oversize">Túlméretes tárgyak kezelése:</strong> Egyedi árazás (pl. kád, kazán)</li>
-                    <li><strong data-i18n="b2c_weekend_fee">Hétvégi felár:</strong> +15%</li>
-                    <li><strong data-i18n="b2c_intro_offer">Bevezető akció:</strong> –10% mindenre 2025. augusztus 31-ig</li>
-                </ul>
-
-                <h3 data-i18n="b2b_prices_heading">🏗️ Céges (B2B) árak – nettó</h3>
-                <ul>
-                    <li><strong data-i18n="b2b_1m3">Sittszállítás (1 m³):</strong> 14 200 Ft + ÁFA</li>
-                    <li><strong data-i18n="b2b_2m3">Sittszállítás (2 m³):</strong> 25 200 Ft + ÁFA</li>
-                    <li><strong data-i18n="b2b_bags">Zsák biztosítása:</strong> 80 Ft / db + ÁFA</li>
-                    <li><strong data-i18n="b2b_over_3m3">3 m³ feletti mennyiség:</strong> Egyedi ajánlat</li>
-                    <li><strong data-i18n="b2b_contract">Szerződéses együttműködés:</strong> Fix havi díjas vagy flottakedvezményes megoldások</li>
-                    <li><strong data-i18n="b2b_invoice_format">Számlakép:</strong> IGEN – minden hivatalosan, magyar cégnévvel</li>
-                </ul>
-
+                <div class="price-grid">
+                    <div class="price-item">
+                        <strong data-i18n="prices_clean_rubble_title">Tiszta, inert sitt (rakodással)</strong>
+                        <span data-i18n="prices_clean_rubble_1m3">1 m³ – 10.000 Ft</span>
+                        <span data-i18n="prices_clean_rubble_2m3">2 m³ – 15.000 Ft</span>
+                        <span data-i18n="prices_clean_rubble_3m3">3 m³ – 20.000 Ft</span>
+                        <span data-i18n="prices_clean_rubble_4m3">4 m³ – 25.000 Ft</span>
+                        <span data-i18n="prices_clean_rubble_5m3">5 m³ – 30.000 Ft</span>
+                        <div style="margin-top:auto;">
+                            <a class="link-downloadcss" href="#contact" data-i18n="cta_request_quote">Ajánlatot kérek</a>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <strong data-i18n="prices_mixed_waste_title">Vegyes hulladék (rakodással)</strong>
+                        <span data-i18n="prices_mixed_waste_1m3">1 m³ – 20.000 Ft</span>
+                        <span data-i18n="prices_mixed_waste_2m3">2 m³ – 30.000 Ft</span>
+                        <span data-i18n="prices_mixed_waste_3m3">3 m³ – 35.000 Ft</span>
+                        <span data-i18n="prices_mixed_waste_4m3">4 m³ – 40.000 Ft</span>
+                        <span data-i18n="prices_mixed_waste_5m3">5 m³ – 45.000 Ft</span>
+                        <div style="margin-top:auto;">
+                            <a class="link-downloadcss" href="#contact" data-i18n="cta_request_quote">Ajánlatot kérek</a>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <strong data-i18n="prices_junk_title">Lomtalanítás</strong>
+                        <span data-i18n="prices_junk_desc1">Már 25.000 Ft-tól</span>
+                        <span data-i18n="prices_junk_desc2">Rakodással, takarítással</span>
+                        <div style="margin-top:auto;">
+                            <a class="link-downloadcss" href="#contact" data-i18n="cta_request_quote">Ajánlatot kérek</a>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <strong data-i18n="prices_bulk_title">Szóródó anyag szállítás</strong>
+                        <span data-i18n="prices_bulk_desc1">Homok, kavics, sóder stb.</span>
+                        <span data-i18n="prices_bulk_desc2">Tüzépről, vastelepről</span>
+                        <span data-i18n="prices_bulk_desc3">Már 20.000 Ft-tól</span>
+                        <div style="margin-top:auto;">
+                            <a class="link-downloadcss" href="#contact" data-i18n="cta_request_quote">Ajánlatot kérek</a>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <strong data-i18n="prices_bagged_title">Zsákos anyag szállítás</strong>
+                        <span data-i18n="prices_bagged_desc">Már 20.000 Ft-tól</span>
+                        <div style="margin-top:auto;">
+                            <a class="link-downloadcss" href="#contact" data-i18n="cta_request_quote">Ajánlatot kérek</a>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <strong data-i18n="prices_invoice_title">Számla</strong>
+                        <span data-i18n="prices_invoice_desc">Igen, minden egyes szállításról és rakodásról hivatalos számlát állítunk ki!</span>
+                        <div style="margin-top:auto;">
+                            <a class="link-downloadcss" href="#contact" data-i18n="cta_request_quote">Ajánlatot kérek</a>
+                        </div>
+                    </div>
+                </div>
                 <h3 data-i18n="section_more_info">🔄 További információk</h3>
-                <ul>
-                    <li><strong data-i18n="no_loader_option">Rakodás nélküli opció:</strong> Csak fuvar kérésre</li>
-                    <li><strong data-i18n="over_30km_fee">30 km feletti cím esetén:</strong> +200 Ft/km</li>
-                    <li><strong data-i18n="deposit_fee">Lerakási díj:</strong> Az árak már tartalmazzák</li>
-                </ul>
-
-                <h3 data-i18n="section_contact_booking">📞 Kapcsolat, időpontfoglalás</h3>
-                <p><strong data-i18n="phone_label">Telefon:</strong> <a data-i18n="phone_number" href="tel:+36301234567">+36 30 123 4567</a></p>
-                <p><strong data-i18n="email_label">E-mail:</strong> <a data-i18n="email_address" href="mailto:info@godisittes.hu">info@godisittes.hu</a></p>
+                <div class="price-grid">
+                    <div class="price-item">
+                        <strong data-i18n="no_loader_option">Rakodás nélküli opció:</strong>
+                        <span data-i18n="no_loader_text">Csak fuvar kérésre</span>
+                    </div>
+                    <div class="price-item">
+                        <strong data-i18n="over_30km_fee">30 km feletti cím esetén:</strong>
+                        <span data-i18n="over_30km_text">+200 Ft/km</span>
+                    </div>
+                    <div class="price-item">
+                        <strong data-i18n="deposit_fee">Lerakási díj:</strong>
+                        <span data-i18n="deposit_fee_text">Az árak már tartalmazzák</span>
+                    </div>
+                </div>
+                <h3 data-i18n="section_contact_booking">📞 Kapcsolat</h3>
+                <div class="contact-bubble">
+                    <p>
+                        <strong data-i18n="phone_label">Telefon:</strong>
+                        <a data-i18n="phone_number" href="tel:+36307732661">+36 30 773 26 61</a>
+                    </p>
+                    <p>
+                        <strong data-i18n="email_label">E-mail:</strong>
+                        <a data-i18n="email_address" href="mailto:info@godisittes.hu">info[at]godisittes[dot]hu</a>
+                    </p>
+                </div>
             </section>
         </article>
         <article id="about">
             <div class="dzsoni-in-da-house" id="dzsoni-sticky-about">
-                <img alt="Zsákos Dzsoni Rólunk" src="/images/zsakos_dzsoni_about.png">
+                <img alt="Zsákos Dzsoni Rólunk" src="/images/zsakos_dzsoni_about.png" loading="lazy">
             </div>
 
             <section class="container">
@@ -160,7 +241,7 @@
             </section>
 
             <div class="dzsoni-in-da-house" id="dzsoni-sticky-why-us">
-                <img alt="Zsákos Dzsoni Miért minkek válassz?" src="/images/zsakos_dzsoni_why_us.png">
+                <img alt="Zsákos Dzsoni Miért minkek válassz?" src="/images/zsakos_dzsoni_why_us.png" loading="lazy">
             </div>
 
             <section class="container">
@@ -176,9 +257,8 @@
             <footer id="files">
                 <div class="container">
                     <h3 data-i18n="downloads_heading">Letölthető anyagok</h3>
-                    <a class="link-downloadcss" href="#" download="" data-i18n="terms_pdf">Szolgáltatási feltételek (PDF)</a>
-                    <a class="link-downloadhtml" href="#" download="" data-i18n="company_info_pdf">Céginformáció (PDF)</a>
-                    <a class="link-codepen" href="#" download="" data-i18n="privacy_policy_pdf">Adatvédelmi tájékoztató (PDF)</a>
+                    <a class="link-downloadcss" href="/hu/pdf/price-list.pdf" download="" data-i18n="price_list_pdf">Árlista (PDF)</a>
+                    <a class="link-downloadcss" href="/hu/pdf/legal-pack.pdf" download="" data-i18n="legal_documents_pdf">Összes jogi dokumentum (PDF)</a>
                 </div>
             </footer>
         </article>
@@ -186,7 +266,7 @@
 </main>
 <aside id="contact">
     <div class="dzsoni-in-da-house" id="dzsoni-sticky-contact">
-        <img alt="Zsákos Dzsoni Kapcsolat" src="/images/zsakos_dzsoni_contact.png">
+        <img alt="Zsákos Dzsoni Kapcsolat" src="/images/zsakos_dzsoni_contact.png" loading="lazy">
     </div>
 
     <div class="container">
@@ -212,13 +292,13 @@
             <input type="text" id="name" name="Név" required="">
 
             <label for="address" data-i18n="form_pickup_address">Cím (ahonnan vinni kell):</label>
-            <input type="text" id="address" name="Cím" required="">
+            <input type="text" id="address" name="Cím" required="" placeholder="Kezdd el begépelni a címet…" autocomplete="off">
 
             <label for="details" data-i18n="form_item_details">Mit kell elszállítani?</label>
             <textarea id="details" name="Tétel" rows="4" required=""></textarea>
 
             <label for="phone" data-i18n="form_phone">Telefonszám:</label>
-            <input type="tel" id="phone" name="Telefonszám" required="">
+            <input type="tel" id="phone" name="Telefonszám" required="" pattern="^\+36\s?\d{1,2}\s?\d{3}\s?\d{3,4}$" placeholder="+36 30 123 4567">
 
             <!-- Google reCAPTCHA v2 -->
             <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
@@ -229,7 +309,7 @@
 </aside>
 <article aria-labelledby="faq-title" class="faq" id="faq">
     <div class="dzsoni-in-da-house" id="dzsoni-sticky-faq">
-        <img alt="Zsákos Dzsoni Gyarkan Ismételt Kérdések" src="/images/zsakos_dzsoni_faq.png">
+        <img alt="Zsákos Dzsoni Gyarkan Ismételt Kérdések" src="/images/zsakos_dzsoni_faq.png" loading="lazy">
     </div>
     <div class="container">
         <h2 data-i18n="section_faq">Gyakran Ismételt Kérdések</h2>
@@ -262,7 +342,7 @@
 </article>
 <article aria-labelledby="impressum-title" class="impressum faq" id="impressum">
     <div class="dzsoni-in-da-house" id="dzsoni-sticky-impressum">
-        <img alt="Zsákos Dzsoni Impresszum" src="/images/zsakos_dzsoni_impress.png">
+        <img alt="Zsákos Dzsoni Impresszum" src="/images/zsakos_dzsoni_impress.png" loading="lazy">
     </div>
     <div class="container">
         <h2 data-i18n="section_impressum">Impresszum</h2>
@@ -292,6 +372,21 @@
             <a href="tel:+36307732661" data-i18n="legal_phone">+36 30 773 2661</a>
         </p>
     </div>
+    <div id="privacy" class="container">
+
+        <h3 data-i18n="privacy_heading">Adatvédelmi nyilatkozat</h3>
+        <p data-i18n="privacy_text">A GodiSittes.hu üzemeltetője elkötelezett a személyes adatok védelme mellett. Adataidat kizárólag a szolgáltatás biztosításához használjuk fel (kapcsolatfelvétel, ajánlatadás). Harmadik félnek nem adjuk tovább. <br> Adatkezelő: Horváth Zoltán – info@godisittes.hu <br> Bármikor kérheted az adataid törlését e-mailben.</p>
+    </div>
+
+    <div id="terms" class="container">
+        <h3 data-i18n="terms_heading">Általános Szerződési Feltételek (ÁSZF)</h3>
+        <p data-i18n="terms_text">A megrendeléssel a Megrendelő elfogadja, hogy: <br> – a fuvar időpontja előzetes egyeztetés alapján történik; <br> – a fizetés a helyszínen vagy előre utalással történik; <br> – a szolgáltató megtagadhatja a teljesítést veszélyes hulladék esetén; <br> – panaszt tenni e-mailben lehet: info@godisittes.hu.</p>
+    </div>
+    <div id="legal-disclaimer" class="container">
+        <h3 data-i18n="legal_disclaimer_heading">Jogi nyilatkozat</h3>
+        <p data-i18n="legal_disclaimer_text">A Zsákos Dzsoni karakter kitalált személy. A Gödi Sittes név szójáték, és marketinges célból készült. A vállalkozás vezetői és alkalmazottai NEM büntetett előéletűek, nem voltak börtönben, és nem állnak kapcsolatban bűnszervezetekkel. Az oldal szövegezése helyenként humoros, szatirikus stílusban íródott, amely nem tükrözi a valós személyek jellemét vagy múltját. Kérjük, ennek megfelelően értelmezd.</p>
+    </div>
+
 </article>
 <footer class="page-footer">
     <div class="container">
@@ -308,5 +403,6 @@
 </footer>
 <script src="/translations.min.js"></script>
 <script src="/script.min.js"></script>
+<a href="#contact" class="mobile-cta" data-i18n="cta_request_quote">Ajánlatot kérek</a>
 
 </body></html>

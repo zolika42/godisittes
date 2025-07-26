@@ -129,7 +129,8 @@ for (const htmlFile of htmlFiles) {
             title: "pageTitle",
             "meta[name='description']": "metaDescription",
             "meta[property='og:title']": "ogTitle",
-            "meta[property='og:description']": "ogDescription"
+            "meta[property='og:description']": "ogDescription",
+            "meta[name='keywords']": "metaKeywords",
         };
 
         for (const [selector, key] of Object.entries(specialMap)) {

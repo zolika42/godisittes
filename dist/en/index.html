@@ -2,9 +2,33 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Meta SEO -->
+    <meta name="description" content="Junk removal, construction waste transport in Göd and nearby areas. Fast, official, no container needed.">
+    <meta name="keywords" content="junk removal, göd, waste, rubble, transport, no container, debris pickup">
+    <meta name="author" content="BeyondStart Solutions SRL">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gödi Sittes – Junk &amp; Waste Removal">
+    <meta property="og:description" content="We remove junk, rubble, sand and more! Fast, official, invoiced services around Göd. No container required.">
+    <meta property="og:image" content="https://godisittes.hu/images/og-image.jpg">
+    <meta property="og:url" content="https://godisittes.hu/">
+    <meta property="og:type" content="website">
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://godisittes.hu/index.html">
+    <link rel="alternate" hreflang="hu" href="https://godisittes.hu/hu">
+    <link rel="alternate" hreflang="en" href="https://godisittes.hu/en">
+    <link rel="alternate" hreflang="de" href="https://godisittes.hu/de">
+
     <title data-i18n="page_title">Gödi Sittes – We Bust the Trash</title>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtA3tWXjkoP4bHuYBYZqZSrwahFRy3gbE&amp;libraries=places"></script>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;display=swap"></noscript>
+    <link rel="preload" href="/images/zsakos_dzsoni.png" as="image">
     <link href="/style.min.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
 <a class="skip-link" data-i18n="skip_to_main_content" href="#main">Skip to main content</a>
@@ -24,61 +48,67 @@
 </header>
 <nav>
     <div id="dzsoni-sticky">
-        <img alt="Zsákos Dzsoni figyel" src="/images/zsakos_dzsoni.png">
+        <img alt="Zsákos Dzsoni figyel" src="/images/zsakos_dzsoni.png" loading="lazy">
     </div>
     <ul>
-        <li><a href="#services" data-i18n="menu_jobs" data-tooltip="Szolgáltatások">Jobs</a></li>
-        <li><a href="#prices" data-i18n="menu_money" data-tooltip="Árak">Rates</a></li>
-        <li><a href="#about" data-i18n="menu_about" data-tooltip="Rólunk">About Us</a></li>
-        <li><a href="#contact" data-i18n="menu_contact" data-tooltip="Kapcsolat">Contact</a></li>
-        <li><a href="#faq" data-i18n="menu_faq" data-tooltip="GYIK">FAQ</a></li>
-        <li><a href="#impressum" data-i18n="menu_legal" data-tooltip="Jogi nyilatkozatok">Legal</a></li>
+        <li id="dzsoni-sticky-menu_jobs"><a href="#services" data-i18n="menu_jobs">Jobs</a></li>
+        <li id="dzsoni-sticky-menu_money"><a href="#prices" data-i18n="menu_money">Rates</a></li>
+        <li id="dzsoni-sticky-menu_about"><a href="#about" data-i18n="menu_about">About Us</a></li>
+        <li id="dzsoni-sticky-menu_contact"><a href="#contact" data-i18n="menu_contact">Contact</a></li>
+        <li id="dzsoni-sticky-menu_faq"><a href="#faq" data-i18n="menu_faq">FAQ</a></li>
+        <li id="dzsoni-sticky-menu_legal"><a href="#impressum" data-i18n="menu_legal">Legal</a></li>
     </ul>
 </nav>
 <main id="main" tabindex="-1">
     <div class="container">
         <article id="services">
             <div class="dzsoni-in-da-house" id="dzsoni-sticky-services">
-                <img alt="Zsákos Dzsoni Szolgáltatásai" src="/images/zsakos_dzsoni_services.png">
+                <img alt="Zsákos Dzsoni Szolgáltatásai" src="/images/zsakos_dzsoni_services.png" loading="lazy">
             </div>
             <section class="container">
                 <h2 data-i18n="section_services">Services</h2>
-
-                <h3 data-i18n="b2c_heading">🧍 For Individuals (B2C)</h3>
                 <ul>
                     <li>
-                        <strong data-i18n="b2c_bagged_waste">Bagged debris removal</strong> – Nincs szükség konténerre, 30 zsákig kényelmes megoldás. Kényelmes, gyors, olcsóbb mint a konténeres!
+                        <strong data-i18n="b2c_bagged_waste">Bagged debris removal</strong>
+                        – <span data-i18n="b2c_bagged_waste_desc">No container needed, up to 30 bags – convenient, fast, and cheaper than container service!</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2c_junk_removal">Junk removal</strong> – Régi bútor, elromlott háztartási eszköz, szemétkupac? Mi elszállítjuk. Igény esetén rakodással.
+                        <strong data-i18n="b2c_junk_removal">Junk removal</strong>
+                        – <span data-i18n="b2c_junk_removal_desc">Old furniture, broken appliances, or piles of junk? We haul it away – loading help available if needed.</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2c_bags_provided">Bag supply</strong> – Kérésre biztosítunk 70 literes erősített zsákokat (+100 Ft/db).
+                        <strong data-i18n="b2c_bags_provided">Bag supply</strong>
+                        – <span data-i18n="b2c_bags_provided_desc">We can provide strong 70L bags upon request (+100 HUF/bag).</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2c_no_loading_help">No loading assistance</strong> – Te rakod meg, mi elvisszük.
+                        <strong data-i18n="b2c_no_loading_help">No loading assistance</strong>
+                        – <span data-i18n="b2c_no_loading_help_desc">You load it – we haul it.</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2c_within_30km">Within 30 km radius</strong> – Göd és környéke, beleértve Dunakeszi, Vác, Fót, Veresegyház.
+                        <strong data-i18n="b2c_within_30km">Within 30 km radius</strong>
+                        – <span data-i18n="b2c_within_30km_desc">Göd and surrounding areas, including Dunakeszi, Vác, Fót, Veresegyház.</span>
                     </li>
                 </ul>
-
-                <h3 data-i18n="b2b_heading">🏗️ For Businesses (B2B)</h3>
                 <ul>
                     <li>
-                        <strong data-i18n="b2b_construction_debris">Construction debris transport</strong> – Beton, tégla, csempe, vakolat, stb. 1–3 m³-ig zsákos megoldással.
+                        <strong data-i18n="b2b_construction_debris">Construction debris transport</strong>
+                        – <span data-i18n="b2b_construction_debris_desc">Concrete, brick, tile, plaster, etc. transported in bags – 1 to 3 m³.</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2b_site_transport">Site transports</strong> – Faanyag, fém, raklapok, könnyűáru szállítása 2m³-ig.
+                        <strong data-i18n="b2b_site_transport">Site transports</strong>
+                        – <span data-i18n="b2b_site_transport_desc">Transport of wood, metal, pallets and light materials up to 2 m³.</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2b_frequent_demand">Frequent transport needs</strong> – Havi fix díjas vagy flottakedvezményes együttműködés.
+                        <strong data-i18n="b2b_frequent_demand">Frequent transport needs</strong>
+                        – <span data-i18n="b2b_frequent_demand_desc">Monthly flat-rate or fleet discount contracts available.</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2b_invoice">Invoice provided</strong> – Cégként hivatalos számlát biztosítunk minden szállításról.
+                        <strong data-i18n="b2b_invoice">Invoice provided</strong>
+                        – <span data-i18n="b2b_invoice_desc">Official invoice provided for every transport.</span>
                     </li>
                     <li>
-                        <strong data-i18n="b2b_urgent_dispatch">Urgent dispatch</strong> – Akár 24 órán belül vállalunk sürgős munkát.
+                        <strong data-i18n="b2b_urgent_dispatch">Urgent dispatch</strong>
+                        – <span data-i18n="b2b_urgent_dispatch_desc">Urgent dispatch available within 24 hours.</span>
                     </li>
                 </ul>
 
@@ -90,54 +120,105 @@
                 </ul>
 
                 <blockquote>
-                    <p><strong data-i18n="offer_heading">Our Offer:</strong> <span data-i18n="offer_text">Cheaper, faster, more flexible than a container! Call us today!</span></p>
+                    <p>
+                        <strong data-i18n="offer_heading">Our Offer:</strong>
+                        <span data-i18n="offer_text">Cheaper, faster, more flexible than a container! Call us today!</span>
+                    </p>
                 </blockquote>
             </section>
         </article>
         <article id="prices">
             <div class="dzsoni-in-da-house" id="dzsoni-sticky-prices">
-                <img alt="Zsákos Dzsoni Árlista" src="/images/zsakos_dzsoni_prices.png">
+                <img alt="Zsákos Dzsoni Árlista" src="/images/zsakos_dzsoni_prices.png" loading="lazy">
             </div>
             <section class="container">
                 <h2 data-i18n="section_prices">Prices</h2>
-
-                <h3 data-i18n="b2c_prices_heading">🧍 Residential (B2C) Rates</h3>
-                <ul>
-                    <li><strong data-i18n="b2c_1m3">Debris transport (1 m³, ~30 bags):</strong> 18 000 Ft (bruttó)</li>
-                    <li><strong data-i18n="b2c_2m3">Debris transport (2 m³):</strong> 32 000 Ft (bruttó)</li>
-                    <li><strong data-i18n="b2c_bags">Bag supply:</strong> +100 Ft / zsák (opcionális)</li>
-                    <li><strong data-i18n="b2c_junk">Junk removal:</strong> 12 000–25 000 Ft, rakodás függvényében</li>
-                    <li><strong data-i18n="b2c_extra_loader">Extra loader:</strong> +5 000 Ft / fő</li>
-                    <li><strong data-i18n="b2c_oversize">Oversized item handling:</strong> Egyedi árazás (pl. kád, kazán)</li>
-                    <li><strong data-i18n="b2c_weekend_fee">Weekend surcharge:</strong> +15%</li>
-                    <li><strong data-i18n="b2c_intro_offer">Intro offer:</strong> –10% mindenre 2025. augusztus 31-ig</li>
-                </ul>
-
-                <h3 data-i18n="b2b_prices_heading">🏗️ Business (B2B) Rates – net</h3>
-                <ul>
-                    <li><strong data-i18n="b2b_1m3">Debris transport (1 m³):</strong> 14 200 Ft + ÁFA</li>
-                    <li><strong data-i18n="b2b_2m3">Debris transport (2 m³):</strong> 25 200 Ft + ÁFA</li>
-                    <li><strong data-i18n="b2b_bags">Bag supply:</strong> 80 Ft / db + ÁFA</li>
-                    <li><strong data-i18n="b2b_over_3m3">Over 3 m³:</strong> Egyedi ajánlat</li>
-                    <li><strong data-i18n="b2b_contract">Contract cooperation:</strong> Fix havi díjas vagy flottakedvezményes megoldások</li>
-                    <li><strong data-i18n="b2b_invoice_format">Invoice format:</strong> IGEN – minden hivatalosan, magyar cégnévvel</li>
-                </ul>
-
+                <div class="price-grid">
+                    <div class="price-item">
+                        <strong data-i18n="prices_clean_rubble_title">Clean inert rubble (with loading)</strong>
+                        <span data-i18n="prices_clean_rubble_1m3">1 m³ – 10,000 HUF</span>
+                        <span data-i18n="prices_clean_rubble_2m3">2 m³ – 15,000 HUF</span>
+                        <span data-i18n="prices_clean_rubble_3m3">3 m³ – 20,000 HUF</span>
+                        <span data-i18n="prices_clean_rubble_4m3">4 m³ – 25,000 HUF</span>
+                        <span data-i18n="prices_clean_rubble_5m3">5 m³ – 30,000 HUF</span>
+                        <div style="margin-top:auto;">
+                            <a class="link-downloadcss" href="#contact" data-i18n="cta_request_quote">Request a quote</a>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <strong data-i18n="prices_mixed_waste_title">Mixed waste (with loading)</strong>
+                        <span data-i18n="prices_mixed_waste_1m3">1 m³ – 20,000 HUF</span>
+                        <span data-i18n="prices_mixed_waste_2m3">2 m³ – 30,000 HUF</span>
+                        <span data-i18n="prices_mixed_waste_3m3">3 m³ – 35,000 HUF</span>
+                        <span data-i18n="prices_mixed_waste_4m3">4 m³ – 40,000 HUF</span>
+                        <span data-i18n="prices_mixed_waste_5m3">5 m³ – 45,000 HUF</span>
+                        <div style="margin-top:auto;">
+                            <a class="link-downloadcss" href="#contact" data-i18n="cta_request_quote">Request a quote</a>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <strong data-i18n="prices_junk_title">Junk removal</strong>
+                        <span data-i18n="prices_junk_desc1">From 25,000 HUF</span>
+                        <span data-i18n="prices_junk_desc2">With loading and cleaning</span>
+                        <div style="margin-top:auto;">
+                            <a class="link-downloadcss" href="#contact" data-i18n="cta_request_quote">Request a quote</a>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <strong data-i18n="prices_bulk_title">Bulk material transport</strong>
+                        <span data-i18n="prices_bulk_desc1">Sand, gravel, crushed stone, etc.</span>
+                        <span data-i18n="prices_bulk_desc2">From depots, scrapyards</span>
+                        <span data-i18n="prices_bulk_desc3">From 20,000 HUF</span>
+                        <div style="margin-top:auto;">
+                            <a class="link-downloadcss" href="#contact" data-i18n="cta_request_quote">Request a quote</a>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <strong data-i18n="prices_bagged_title">Bagged material transport</strong>
+                        <span data-i18n="prices_bagged_desc">From 20,000 HUF</span>
+                        <div style="margin-top:auto;">
+                            <a class="link-downloadcss" href="#contact" data-i18n="cta_request_quote">Request a quote</a>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <strong data-i18n="prices_invoice_title">Invoice</strong>
+                        <span data-i18n="prices_invoice_desc">Yes, we issue an official invoice for every transport and loading!</span>
+                        <div style="margin-top:auto;">
+                            <a class="link-downloadcss" href="#contact" data-i18n="cta_request_quote">Request a quote</a>
+                        </div>
+                    </div>
+                </div>
                 <h3 data-i18n="section_more_info">🔄 More Information</h3>
-                <ul>
-                    <li><strong data-i18n="no_loader_option">Option without loading:</strong> Csak fuvar kérésre</li>
-                    <li><strong data-i18n="over_30km_fee">Fee over 30 km:</strong> +200 Ft/km</li>
-                    <li><strong data-i18n="deposit_fee">Disposal fee:</strong> Az árak már tartalmazzák</li>
-                </ul>
-
+                <div class="price-grid">
+                    <div class="price-item">
+                        <strong data-i18n="no_loader_option">No loading option:</strong>
+                        <span data-i18n="no_loader_text">Transport only on request</span>
+                    </div>
+                    <div class="price-item">
+                        <strong data-i18n="over_30km_fee">For addresses over 30 km:</strong>
+                        <span data-i18n="over_30km_text">+200 HUF/km</span>
+                    </div>
+                    <div class="price-item">
+                        <strong data-i18n="deposit_fee">Dumping fee:</strong>
+                        <span data-i18n="deposit_fee_text">Included in the prices</span>
+                    </div>
+                </div>
                 <h3 data-i18n="section_contact_booking">📞 Contact &amp; Booking</h3>
-                <p><strong data-i18n="phone_label">Phone:</strong> <a data-i18n="phone_number" href="tel:+36301234567">+36 30 123 4567</a></p>
-                <p><strong data-i18n="email_label">Email:</strong> <a data-i18n="email_address" href="mailto:info@godisittes.hu">info@godisittes.hu</a></p>
+                <div class="contact-bubble">
+                    <p>
+                        <strong data-i18n="phone_label">Phone:</strong>
+                        <a data-i18n="phone_number" href="tel:+36307732661">+36 30 123 4567</a>
+                    </p>
+                    <p>
+                        <strong data-i18n="email_label">Email:</strong>
+                        <a data-i18n="email_address" href="mailto:info@godisittes.hu">info@godisittes.hu</a>
+                    </p>
+                </div>
             </section>
         </article>
         <article id="about">
             <div class="dzsoni-in-da-house" id="dzsoni-sticky-about">
-                <img alt="Zsákos Dzsoni Rólunk" src="/images/zsakos_dzsoni_about.png">
+                <img alt="Zsákos Dzsoni Rólunk" src="/images/zsakos_dzsoni_about.png" loading="lazy">
             </div>
 
             <section class="container">
@@ -160,7 +241,7 @@
             </section>
 
             <div class="dzsoni-in-da-house" id="dzsoni-sticky-why-us">
-                <img alt="Zsákos Dzsoni Miért minkek válassz?" src="/images/zsakos_dzsoni_why_us.png">
+                <img alt="Zsákos Dzsoni Miért minkek válassz?" src="/images/zsakos_dzsoni_why_us.png" loading="lazy">
             </div>
 
             <section class="container">
@@ -176,9 +257,8 @@
             <footer id="files">
                 <div class="container">
                     <h3 data-i18n="downloads_heading">Downloads</h3>
-                    <a class="link-downloadcss" href="#" download="" data-i18n="terms_pdf">Terms of Service (PDF)</a>
-                    <a class="link-downloadhtml" href="#" download="" data-i18n="company_info_pdf">Company Info (PDF)</a>
-                    <a class="link-codepen" href="#" download="" data-i18n="privacy_policy_pdf">Privacy Policy (PDF)</a>
+                    <a class="link-downloadcss" href="/en/pdf/price-list.pdf" download="" data-i18n="price_list_pdf">Price list (PDF)</a>
+                    <a class="link-downloadcss" href="/en/pdf/legal-pack.pdf" download="" data-i18n="legal_documents_pdf">All legal documents (PDF)</a>
                 </div>
             </footer>
         </article>
@@ -186,7 +266,7 @@
 </main>
 <aside id="contact">
     <div class="dzsoni-in-da-house" id="dzsoni-sticky-contact">
-        <img alt="Zsákos Dzsoni Kapcsolat" src="/images/zsakos_dzsoni_contact.png">
+        <img alt="Zsákos Dzsoni Kapcsolat" src="/images/zsakos_dzsoni_contact.png" loading="lazy">
     </div>
 
     <div class="container">
@@ -212,13 +292,13 @@
             <input type="text" id="name" name="Név" required="">
 
             <label for="address" data-i18n="form_pickup_address">Pickup address:</label>
-            <input type="text" id="address" name="Cím" required="">
+            <input type="text" id="address" name="Cím" required="" placeholder="Kezdd el begépelni a címet…" autocomplete="off">
 
             <label for="details" data-i18n="form_item_details">What needs to be removed?</label>
             <textarea id="details" name="Tétel" rows="4" required=""></textarea>
 
             <label for="phone" data-i18n="form_phone">Phone number:</label>
-            <input type="tel" id="phone" name="Telefonszám" required="">
+            <input type="tel" id="phone" name="Telefonszám" required="" pattern="^\+36\s?\d{1,2}\s?\d{3}\s?\d{3,4}$" placeholder="+36 30 123 4567">
 
             <!-- Google reCAPTCHA v2 -->
             <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
@@ -229,7 +309,7 @@
 </aside>
 <article aria-labelledby="faq-title" class="faq" id="faq">
     <div class="dzsoni-in-da-house" id="dzsoni-sticky-faq">
-        <img alt="Zsákos Dzsoni Gyarkan Ismételt Kérdések" src="/images/zsakos_dzsoni_faq.png">
+        <img alt="Zsákos Dzsoni Gyarkan Ismételt Kérdések" src="/images/zsakos_dzsoni_faq.png" loading="lazy">
     </div>
     <div class="container">
         <h2 data-i18n="section_faq">Frequently Asked Questions</h2>
@@ -262,7 +342,7 @@
 </article>
 <article aria-labelledby="impressum-title" class="impressum faq" id="impressum">
     <div class="dzsoni-in-da-house" id="dzsoni-sticky-impressum">
-        <img alt="Zsákos Dzsoni Impresszum" src="/images/zsakos_dzsoni_impress.png">
+        <img alt="Zsákos Dzsoni Impresszum" src="/images/zsakos_dzsoni_impress.png" loading="lazy">
     </div>
     <div class="container">
         <h2 data-i18n="section_impressum">Imprint</h2>
@@ -292,6 +372,21 @@
             <a href="tel:+36307732661" data-i18n="legal_phone">+36 30 773 2661</a>
         </p>
     </div>
+    <div id="privacy" class="container">
+
+        <h3 data-i18n="privacy_heading">Privacy Policy</h3>
+        <p data-i18n="privacy_text">The operator of GodiSittes.hu is committed to protecting your personal data. We only use your information to provide the service (e.g. contact, quote). We do not share your data with third parties. <br> Data controller: Zoltán Horváth – info@godisittes.hu <br> You may request data deletion via email at any time.</p>
+    </div>
+
+    <div id="terms" class="container">
+        <h3 data-i18n="terms_heading">Terms and Conditions</h3>
+        <p data-i18n="terms_text">By placing an order, the Customer accepts that: <br> – the transport date is agreed in advance; <br> – payment is due on-site or via bank transfer; <br> – the service provider may refuse service for hazardous waste; <br> – complaints may be submitted via email: info@godisittes.hu.</p>
+    </div>
+    <div id="legal-disclaimer" class="container">
+        <h3 data-i18n="legal_disclaimer_heading">Legal Disclaimer</h3>
+        <p data-i18n="legal_disclaimer_text">The character 'Zsákos Dzsoni' is fictional. The name 'Gödi Sittes' is a wordplay used for marketing purposes. The company's founders and employees do NOT have criminal records, have NOT been in prison, and are NOT associated with any criminal organizations. The wording of the site uses humor and satire and is not reflective of real individuals' character or history. Please interpret accordingly.</p>
+    </div>
+
 </article>
 <footer class="page-footer">
     <div class="container">
@@ -308,5 +403,6 @@
 </footer>
 <script src="/translations.min.js"></script>
 <script src="/script.min.js"></script>
+<a href="#contact" class="mobile-cta" data-i18n="cta_request_quote">Request a quote</a>
 
 </body></html>

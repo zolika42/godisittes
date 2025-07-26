@@ -341,7 +341,7 @@ header h2, slogan {
     max-width: 30ch;
     font-size: clamp(1.875rem, 4vw, var(--font-size-h2));
     font-weight: var(--font-weight-semibold);
-    margin: auto auto 0.65em;
+    margin: 0.65rem auto 0.65em;
     color: var(--color-white);
     font-style: italic;
     letter-spacing: -0.05em;
@@ -418,14 +418,6 @@ nav ul a:focus {
     margin-top: 6rem;
 }
 
-#about section:nth-child(2) p:nth-of-type(2), #prices section:nth-child(2) p:nth-of-type(2) {
-    align-self: center;
-    margin-top: 2rem;
-    font-size: var(--font-size-h4);
-    font-weight: var(--font-weight-bold);
-    text-align: center;
-}
-
 #about section:nth-child(2) ul, #prices section:nth-child(2) ul {
     display: flex;
     flex-wrap: wrap;
@@ -471,7 +463,7 @@ nav ul a:focus {
 
 #about section,
 #prices section {
-    padding-bottom: 0;
+    padding-bottom: 1rem;
     border-bottom: none;
     background-color: var(--color-white);
 }
@@ -794,12 +786,12 @@ form button:hover {
 
 #dzsoni-sticky-prices {
     left: calc(100% - 320px);
-    bottom: 50%;
+    bottom: 35%;
 }
 
 div#dzsoni-sticky-about {
     left: calc(100% - 320px);
-    bottom: 70%;
+    bottom: 25%;
 }
 
 div#dzsoni-sticky-why-us {
@@ -844,6 +836,41 @@ div#dzsoni-sticky-contact {
     cursor: pointer;
 }
 
+nav ul li .speech-bubble {
+    right: unset;
+    margin-left: -7%;
+    margin-top: -8%;
+}
+
+/* Tail */
+nav ul li .speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #fffbea; /* buborék háttérszíne */
+    z-index: 9;
+}
+
+nav ul li .speech-bubble::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(3px);
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-top: 18px solid #000; /* buborék keretszíne */
+    z-index: 8;
+}
+
 .speech-bubble::after {
     content: '';
     position: absolute;
@@ -869,30 +896,6 @@ div#dzsoni-sticky-contact {
     border-left: 23px solid #000; /* a buborék keretszíne */
     z-index: 8;
 }
-
-nav ul a[data-tooltip]::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    top: -2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fffbea;
-    color: #fff;
-    font-family: 'Comic Sans MS', cursive;
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-    border: 2px solid #000;
-    border-radius: 10px;
-    white-space: nowrap;
-    display: none;
-    z-index: 99;
-    box-shadow: 3px 3px 0 #000;
-}
-
-nav ul a[data-tooltip]:hover::after {
-    display: block;
-}
-
 
 .speech-bubble {
     position: absolute;
@@ -958,9 +961,116 @@ div.dzsoni-in-da-house:hover {
 
     .speech-bubble {
         top: -3.5rem;
+        right: 50%;
     }
 }
 
 aside, article {
     position: relative;
+}
+
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .price-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.price-item {
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 #000;
+    padding: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s;
+    position: relative;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-height: 100px;
+}
+
+.price-item:hover {
+    transform: rotate(-1.5deg) scale(1.04);
+    box-shadow: 6px 6px 0 #000;
+    background-color: #fff3b0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.price-item strong {
+    display: block;
+    font-weight: 900;
+    margin-bottom: 0.25rem;
+    color: black;
+}
+
+.price-item span {
+    display: block;
+    font-weight: 500;
+    color: #222;
+}
+
+.contact-bubble {
+    border: 4px solid #222;
+    border-radius: 1rem;
+    box-shadow: 6px 6px 0 #000;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    transition: transform 0.2s ease;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+.contact-bubble:hover {
+    transform: rotate(-1deg) scale(1.02);
+    background: #fff4a3;
+}
+
+.contact-bubble strong {
+    display: block;
+    color: #000;
+    margin-bottom: 0.2rem;
+}
+
+.contact-bubble a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline dotted;
+}
+
+.contact-bubble a:hover {
+    color: #d40000;
+    text-decoration-style: solid;
+}
+
+.mobile-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 9999;
+    text-decoration: none;
+    border-top: 3px solid #ffcc00;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-cta {
+        display: block;
+    }
 }
