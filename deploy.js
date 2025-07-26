@@ -10,6 +10,13 @@ const red = (str) => `\x1b[31m${str}\x1b[0m`;
 const original = fs.readFileSync("translations.js", "utf-8");
 const originalScript = fs.readFileSync("script.js", "utf-8");
 const exported = original.replace(/^const translations =/, "module.exports =");
+const specialKeys = [
+    "pageTitle",
+    "metaDescription",
+    "ogTitle",
+    "ogDescription",
+    "metaKeywords"
+];
 fs.writeFileSync("translations.node.js", exported);
 console.log(green("✔ translations.node.js létrehozva."));
 
@@ -248,7 +255,7 @@ const robotsTxt = `User-agent: *\nAllow: /\nSitemap: ${siteBase}/sitemap.xml`;
 fs.writeFileSync(path.join(targetDir, "robots.txt"), robotsTxt, "utf-8");
 console.log(green("✔ robots.txt létrehozva."));
 
-// Nyelvválasztó dropdown frissítése adott nyelvre
+// 13. Nyelvválasztó dropdown frissítése adott nyelvre
 function updateLanguageSelect(doc, currentLang) {
     const select = doc.querySelector("select#language");
     if (!select) return;
@@ -263,4 +270,58 @@ function updateLanguageSelect(doc, currentLang) {
             opt.removeAttribute("selected");
         }
     });
+}
+
+// 14. Nem használt fordítási kulcsok logolása
+const usedKeys = new Set();
+htmlFiles.forEach(file => {
+    const htmlContent = fs.readFileSync(file, "utf-8");
+    const matches = [...htmlContent.matchAll(/data-i18n=["']([^"']+)["']/g)];
+    matches.forEach(m => usedKeys.add(m[1]));
+});
+
+const unusedKeysByLang = {};
+for (const [lang, dict] of Object.entries(translations)) {
+    const langKeys = Object.keys(dict);
+    const unused = langKeys.filter(k => !usedKeys.has(k));
+    if (unused.length > 0) unusedKeysByLang[lang] = unused;
+}
+
+if (Object.keys(unusedKeysByLang).length > 0) {
+    const col1 = "key";
+    const col2 = "language";
+    const col3 = "file";
+    const table = [];
+
+    const unusedKeysByLang = {};
+
+    Object.entries(translations).forEach(([lang, langData]) => {
+        const unused = Object.keys(langData).filter(key => !usedKeys.has(key) && !specialKeys.includes(key));
+        if (unused.length > 0) unusedKeysByLang[lang] = unused;
+    });
+
+    Object.entries(unusedKeysByLang).forEach(([lang, keys]) => {
+        keys.forEach(key => {
+            table.push({ key, lang, file: "translations.js" });
+        });
+    });
+
+    const col1Len = Math.max(...table.map(r => r.key.length), col1.length);
+    const col2Len = Math.max(...table.map(r => r.lang.length), col2.length);
+    const col3Len = Math.max(...table.map(r => r.file.length), col3.length);
+
+    const line = `┌${"─".repeat(col1Len + 2)}┬${"─".repeat(col2Len + 2)}┬${"─".repeat(col3Len + 2)}┐`;
+    const sep = `├${"─".repeat(col1Len + 2)}┼${"─".repeat(col2Len + 2)}┼${"─".repeat(col3Len + 2)}┤`;
+    const end = `└${"─".repeat(col1Len + 2)}┴${"─".repeat(col2Len + 2)}┴${"─".repeat(col3Len + 2)}┘`;
+
+    console.log("\n🟨 Nem használt fordítási kulcsok:");
+    console.log(line);
+    console.log(`│ ${pad(col1, col1Len)} │ ${pad(col2, col2Len)} │ ${pad(col3, col3Len)} │`);
+    console.log(sep);
+    for (const row of table) {
+        console.log(yellow(`│ ${pad(row.key, col1Len)} │ ${pad(row.lang, col2Len)} │ ${pad(row.file, col3Len)} │`));
+    }
+    console.log(end);
+} else {
+    console.log(green("🎉 Nincs nem használt fordítási kulcs. Tiszta a translations.js!"));
 }

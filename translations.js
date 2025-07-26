@@ -128,7 +128,7 @@ const translations = {
         label_email: "E-mail:",
         email_address_2: "info@godisittes.hu",
         label_address: "Cím:",
-        company_address: "Str. Parângului 10, Ap. 2, 440031, Szatmárnémeti, Románia",
+        company_address: "Kodály Zoltán utca 26., Göd, 2131, Magyarország",
 
         form_name: "Név:",
         form_pickup_address: "Cím (ahonnan vinni kell):",
@@ -165,12 +165,10 @@ const translations = {
         legal_operator: "Üzemeltető:",
         legal_address: "Székhely:",
         legal_vat: "Adószám:",
-        legal_registry: "Cégjegyzékszám:",
         legal_contact: "Kapcsolat:",
         legal_ceo: "Cégvezető: Horváth Zoltán",
-        legal_postal_code_city_country: "440031, Szatmárnémeti, Románia",
         legal_email: "info@godisittes.hu",
-        legal_zip_city: "440031, Szatmárnémeti, Románia",
+        legal_zip_city: "2131, Göd, Kodály Zoltán u. 26., Magyarország",
         legal_email_label: "E-mail:",
         legal_phone_label: "Telefon:",
 
@@ -188,8 +186,8 @@ const translations = {
         // Footer
         footer_copyright: "© 2025 Godisittes.hu – Minden jog fenntartva.",
         footer_ceo: "Cégvezető: Horváth Zoltán",
-        footer_address: "Székhely: Str. Parângului 10, Ap. 2, 440031, Szatmárnémeti, Románia",
-        footer_tax_registry: "Adószám: RO43923085 • Cégjegyzékszám: J30/291/2021",
+        footer_address: "Székhely: 2131, Göd, Kodály Zoltán u. 26, Magyarország.",
+        footer_tax_registry: "Adószám: 8434312506",
         footer_impressum: "Impresszum",
         footer_privacy: "Adatvédelem",
         footer_terms: "ÁSZF"
@@ -217,7 +215,6 @@ const translations = {
 
         // Services
         section_services: "Services",
-        b2c_heading: "🧍 For Individuals (B2C)",
         b2c_bagged_waste: "Bagged debris removal",
         b2c_junk_removal: "Junk removal",
         b2c_bags_provided: "Bag supply",
@@ -230,7 +227,6 @@ const translations = {
         b2c_no_loading_help_desc: "You load it – we haul it.",
         b2c_within_30km_desc: "Göd and surrounding areas, including Dunakeszi, Vác, Fót, Veresegyház.",
 
-        b2b_heading: "🏗️ For Businesses (B2B)",
         b2b_construction_debris: "Construction debris transport",
         b2b_site_transport: "Site transports",
         b2b_frequent_demand: "Frequent transport needs",
@@ -322,7 +318,7 @@ const translations = {
         label_email: "Email:",
         email_address_2: "info@godisittes.hu",
         label_address: "Address:",
-        company_address: "Str. Parângului 10, Ap. 2, 440031, Satu Mare, Romania",
+        company_address: "26 Kodály Zoltán str 26., Göd, 2131, Hungary",
 
         form_name: "Name:",
         form_pickup_address: "Pickup address:",
@@ -359,12 +355,10 @@ const translations = {
         legal_operator: "Operator:",
         legal_address: "Registered Office:",
         legal_vat: "Tax ID:",
-        legal_registry: "Company Registry:",
         legal_contact: "Contact:",
         legal_ceo: "CEO: Zoltán Horváth",
-        legal_postal_code_city_country: "440031, Satu Mare, Romania",
         legal_email: "info@godisittes.hu",
-        legal_zip_city: "440031, Satu Mare, Romania",
+        legal_zip_city: "2131, Göd, 26 Kodály Zoltán str., Hungary",
         legal_email_label: "Email:",
         legal_phone_label: "Phone:",
 
@@ -382,8 +376,8 @@ const translations = {
         // Footer
         footer_copyright: "© 2025 Godisittes.hu – All rights reserved.",
         footer_ceo: "CEO: Zoltán Horváth",
-        footer_address: "Address: Str. Parângului 10, Ap. 2, 440031, Satu Mare, Romania",
-        footer_tax_registry: "Tax ID: RO43923085 • Registry No.: J30/291/2021",
+        footer_address: "Address: 2131, Göd, Kodály Zoltán str. 26, Hungary.",
+        footer_tax_registry: "Tax ID: 8434312506",
         footer_impressum: "Imprint",
         footer_privacy: "Privacy",
         footer_terms: "Terms"
@@ -410,7 +404,6 @@ const translations = {
 
         // Services
         section_services: "Dienstleistungen",
-        b2c_heading: "🧍 Für Privatkunden (B2C)",
         b2c_bagged_waste: "Müllentsorgung in Säcken",
         b2c_junk_removal: "Entrümpelung",
         b2c_bags_provided: "Bereitstellung von Säcken",
@@ -423,7 +416,6 @@ const translations = {
         b2c_no_loading_help_desc: "Du lädst ein – wir transportieren.",
         b2c_within_30km_desc: "Göd und Umgebung, einschließlich Dunakeszi, Vác, Fót, Veresegyház.",
 
-        b2b_heading: "🏗️ Für Firmen und Bauunternehmen (B2B)",
         b2b_construction_debris: "Bauschutt-Transport",
         b2b_site_transport: "Transport zwischen Baustellen",
         b2b_frequent_demand: "Regelmäßiger Bedarf",
@@ -515,7 +507,7 @@ const translations = {
         label_email: "E-Mail:",
         email_address_2: "info@godisittes.hu",
         label_address: "Adresse:",
-        company_address: "Str. Parângului 10, Ap. 2, 440031, Satu Mare, Rumänien",
+        company_address: "26 Kodály Zoltán strasse, Göd, 2131, Ungarn",
 
         form_name: "Name:",
         form_pickup_address: "Abholadresse:",
@@ -552,12 +544,10 @@ const translations = {
         legal_operator: "Betreiber:",
         legal_address: "Sitz:",
         legal_vat: "Umsatzsteuer-ID:",
-        legal_registry: "Handelsregisternummer:",
         legal_contact: "Kontakt:",
         legal_ceo: "Geschäftsführer: Zoltán Horváth",
-        legal_postal_code_city_country: "440031, Sathmar, Rumänien",
         legal_email: "info@godisittes.hu",
-        legal_zip_city: "440031, Sathmar, Rumänien",
+        legal_zip_city: "2131, Göd, 26 Kodály Zoltán stasse, Ungarn",
         legal_email_label: "E-Mail:",
         legal_phone_label: "Telefon:",
 
@@ -575,8 +565,8 @@ const translations = {
         // Footer
         footer_copyright: "© 2025 Godisittes.hu – Alle Rechte vorbehalten.",
         footer_ceo: "Geschäftsführer: Zoltán Horváth",
-        footer_address: "Sitz: Str. Parângului 10, Ap. 2, 440031, Satu Mare, Rumänien",
-        footer_tax_registry: "USt-ID: RO43923085 • Handelsregisternr.: J30/291/2021",
+        footer_address: "Sitz: 2131, Göd, Kodály Zoltán strasse 26, Ungarn.",
+        footer_tax_registry: "USt-ID: 8434312506",
         footer_impressum: "Impressum",
         footer_privacy: "Datenschutz",
         footer_terms: "AGB"
