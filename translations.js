@@ -54,6 +54,7 @@ const translations = {
 
         offer_heading: "Ajánlatunk:",
         offer_text: "Olcsóbb, gyorsabb, rugalmasabb mint a konténer! Hívj minket még ma!",
+        call_now: "📞 Hívj most: +36 30 773 2661",
 
         //Prices
         section_prices: "Áraink",
@@ -248,6 +249,7 @@ const translations = {
 
         offer_heading: "Our Offer:",
         offer_text: "Cheaper, faster, more flexible than a container! Call us today!",
+        call_now: "📞 Call now: +36 30 773 2661",
 
         // Prices
         section_prices: "Prices",
@@ -439,6 +441,7 @@ const translations = {
 
         offer_heading: "Unser Angebot:",
         offer_text: "Günstiger, schneller, flexibler als Container! Ruf uns noch heute an!",
+        call_now: "📞 Ruf jetzt an: +36 30 773 2661",
 
         // Prices
         cta_request_quote: "Angebot anfordern",
