@@ -1074,3 +1074,17 @@ aside, article {
         display: block;
     }
 }
+
+.fixed-desktop-cta {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    display: none;
+}
+
+@media screen and (min-width: 769px) {
+    .fixed-desktop-cta {
+        display: inline-block;
+    }
+}

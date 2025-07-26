@@ -31,7 +31,7 @@ const translations = {
 
         b2c_bagged_waste_desc: "Nincs szükség konténerre, 30 zsákig kényelmes megoldás. Kényelmes, gyors, olcsóbb mint a konténeres!",
         b2c_junk_removal_desc: "Régi bútor, elromlott háztartási eszköz, szemétkupac? Mi elszállítjuk. Igény esetén rakodással.",
-        b2c_bags_provided_desc: "Kérésre biztosítunk 70 literes erősített zsákokat (+100 Ft/db).",
+        b2c_bags_provided_desc: "Kérésre biztosítunk 70 literes erősített zsákokat (+400 Ft/db).",
         b2c_no_loading_help_desc: "Te rakod meg, mi elvisszük.",
         b2c_within_30km_desc: "Göd és környéke, beleértve Dunakeszi, Vác, Fót, Veresegyház.",
 
@@ -100,7 +100,7 @@ const translations = {
 
         section_contact_booking: "📞 Kapcsolat",
         phone_label: "Telefon:",
-        phone_number: "+36 30 773 26 61",
+        phone: "+36 30 773 26 61",
         email_label: "E-mail:",
         email_address: "info[at]godisittes[dot]hu",
 
@@ -125,7 +125,6 @@ const translations = {
         section_contact: "Kapcsolat",
         contact_call_or_form: "Hívj minket bizalommal vagy töltsd ki az alábbi űrlapot:",
         label_phone: "Telefon:",
-        phone_number_2: "+36 30 773 2661",
         label_email: "E-mail:",
         email_address_2: "info@godisittes.hu",
         label_address: "Cím:",
@@ -146,11 +145,11 @@ const translations = {
 
         faq_quantity_question: "Mekkora mennyiséget szállítotok el egyszerre?",
         faq_quantity_question_strong: "Mekkora mennyiséget szállítotok el egyszerre?",
-        faq_quantity_answer: "Átlagosan 1–2 m³-ig, azaz kb. 30–60 zsáknyi sittet. Ennél nagyobb mennyiségnél egyedi egyeztetés szükséges.",
+        faq_quantity_answer: "Átlagosan 1–2 m³-ig, azaz kb. 30–60 zsáknyi sittet.",
 
         faq_need_bags_question: "Kell-e előre zsákokat venni?",
         faq_need_bags_question_strong: "Kell-e előre zsákokat venni?",
-        faq_need_bags_answer: "Ha neked van zsákod, az tökéletes! Ha nincs, tőlünk is rendelhetsz erős, 70 literes sittes zsákot 100 Ft/db áron.",
+        faq_need_bags_answer: "Ha neked van zsákod, az tökéletes! Ha nincs, tőlünk is rendelhetsz erős, 70 literes sittes zsákot 400 Ft/db áron.",
 
         faq_location_question: "Honnan vállaltok elszállítást?",
         faq_location_question_strong: "Honnan vállaltok elszállítást?",
@@ -168,8 +167,12 @@ const translations = {
         legal_vat: "Adószám:",
         legal_registry: "Cégjegyzékszám:",
         legal_contact: "Kapcsolat:",
+        legal_ceo: "Cégvezető: Horváth Zoltán",
+        legal_postal_code_city_country: "440031, Szatmárnémeti, Románia",
         legal_email: "info@godisittes.hu",
-        legal_phone: "+36 30 773 2661",
+        legal_zip_city: "440031, Szatmárnémeti, Románia",
+        legal_email_label: "E-mail:",
+        legal_phone_label: "Telefon:",
 
         // Privacy policy
         privacy_heading: "Adatvédelmi nyilatkozat",
@@ -223,7 +226,7 @@ const translations = {
 
         b2c_bagged_waste_desc: "No container needed, up to 30 bags – convenient, fast, and cheaper than container service!",
         b2c_junk_removal_desc: "Old furniture, broken appliances, or piles of junk? We haul it away – loading help available if needed.",
-        b2c_bags_provided_desc: "We can provide strong 70L bags upon request (+100 HUF/bag).",
+        b2c_bags_provided_desc: "We can provide strong 70L bags upon request (+400 HUF/bag).",
         b2c_no_loading_help_desc: "You load it – we haul it.",
         b2c_within_30km_desc: "Göd and surrounding areas, including Dunakeszi, Vác, Fót, Veresegyház.",
 
@@ -291,7 +294,7 @@ const translations = {
 
         section_contact_booking: "📞 Contact & Booking",
         phone_label: "Phone:",
-        phone_number: "+36 30 123 4567",
+        phone: "+36 30 773 2661",
         email_label: "Email:",
         email_address: "info@godisittes.hu",
 
@@ -316,7 +319,6 @@ const translations = {
         section_contact: "Contact",
         contact_call_or_form: "Call us or fill out the form below:",
         label_phone: "Phone:",
-        phone_number_2: "+36 30 773 2661",
         label_email: "Email:",
         email_address_2: "info@godisittes.hu",
         label_address: "Address:",
@@ -337,11 +339,11 @@ const translations = {
 
         faq_quantity_question: "How much do you remove at once?",
         faq_quantity_question_strong: "How much do you remove at once?",
-        faq_quantity_answer: "Typically up to 1–2 m³, around 30–60 bags. For larger amounts, contact us first.",
+        faq_quantity_answer: "Typically up to 1–2 m³, around 30–60 bags.",
 
         faq_need_bags_question: "Do I need to buy bags in advance?",
         faq_need_bags_question_strong: "Do I need to buy bags in advance?",
-        faq_need_bags_answer: "If you have your own bags, great! If not, we can provide strong 70L bags for 100 HUF each.",
+        faq_need_bags_answer: "If you have your own bags, great! If not, we can provide strong 70L bags for 400 HUF each.",
 
         faq_location_question: "Where do you offer pickup?",
         faq_location_question_strong: "Where do you offer pickup?",
@@ -359,8 +361,12 @@ const translations = {
         legal_vat: "Tax ID:",
         legal_registry: "Company Registry:",
         legal_contact: "Contact:",
+        legal_ceo: "CEO: Zoltán Horváth",
+        legal_postal_code_city_country: "440031, Satu Mare, Romania",
         legal_email: "info@godisittes.hu",
-        legal_phone: "+36 30 773 2661",
+        legal_zip_city: "440031, Satu Mare, Romania",
+        legal_email_label: "Email:",
+        legal_phone_label: "Phone:",
 
         // Privacy policy
         privacy_heading: "Privacy Policy",
@@ -413,7 +419,7 @@ const translations = {
 
         b2c_bagged_waste_desc: "Kein Container nötig, bis zu 30 Säcke – bequem, schnell und günstiger als ein Container!",
         b2c_junk_removal_desc: "Alte Möbel, defekte Geräte oder Müllhaufen? Wir holen alles ab – auf Wunsch mit Ladehilfe.",
-        b2c_bags_provided_desc: "Auf Wunsch stellen wir verstärkte 70-Liter-Säcke bereit (+100 Ft/Stück).",
+        b2c_bags_provided_desc: "Auf Wunsch stellen wir verstärkte 70-Liter-Säcke bereit (+400 Ft/Stück).",
         b2c_no_loading_help_desc: "Du lädst ein – wir transportieren.",
         b2c_within_30km_desc: "Göd und Umgebung, einschließlich Dunakeszi, Vác, Fót, Veresegyház.",
 
@@ -481,7 +487,6 @@ const translations = {
 
         section_contact_booking: "📞 Kontakt, Terminvereinbarung",
         phone_label: "Telefon:",
-        phone_number: "+36 30 123 4567",
         email_label: "E-Mail:",
         email_address: "info@godisittes.hu",
 
@@ -506,7 +511,7 @@ const translations = {
         section_contact: "Kontakt",
         contact_call_or_form: "Ruf uns an oder füll das Formular aus:",
         label_phone: "Telefon:",
-        phone_number_2: "+36 30 773 2661",
+        phone: "+36 30 773 2661",
         label_email: "E-Mail:",
         email_address_2: "info@godisittes.hu",
         label_address: "Adresse:",
@@ -527,11 +532,11 @@ const translations = {
 
         faq_quantity_question: "Wie viel entsorgt ihr auf einmal?",
         faq_quantity_question_strong: "Wie viel entsorgt ihr auf einmal?",
-        faq_quantity_answer: "In der Regel bis zu 1–2 m³, also etwa 30–60 Säcke. Größere Mengen nach Absprache.",
+        faq_quantity_answer: "In der Regel bis zu 1–2 m³, also etwa 30–60 Säcke.",
 
         faq_need_bags_question: "Muss ich die Säcke selbst besorgen?",
         faq_need_bags_question_strong: "Muss ich die Säcke selbst besorgen?",
-        faq_need_bags_answer: "Wenn du Säcke hast – super! Wenn nicht, kannst du bei uns stabile 70-Liter-Säcke für 100 Ft/Stück bestellen.",
+        faq_need_bags_answer: "Wenn du Säcke hast – super! Wenn nicht, kannst du bei uns stabile 70-Liter-Säcke für 400 Ft/Stück bestellen.",
 
         faq_location_question: "Wo bietet ihr eure Dienste an?",
         faq_location_question_strong: "Wo bietet ihr eure Dienste an?",
@@ -549,8 +554,12 @@ const translations = {
         legal_vat: "Umsatzsteuer-ID:",
         legal_registry: "Handelsregisternummer:",
         legal_contact: "Kontakt:",
+        legal_ceo: "Geschäftsführer: Zoltán Horváth",
+        legal_postal_code_city_country: "440031, Sathmar, Rumänien",
         legal_email: "info@godisittes.hu",
-        legal_phone: "+36 30 773 2661",
+        legal_zip_city: "440031, Sathmar, Rumänien",
+        legal_email_label: "E-Mail:",
+        legal_phone_label: "Telefon:",
 
         // Privacy policy
         privacy_heading: "Datenschutzerklärung",
