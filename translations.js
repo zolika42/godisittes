@@ -834,5 +834,28 @@ const dzsoniSpeechTexts = {
             "Keine Märchen – nur echte Knast-Geschichten!",
             "Die Stories knallen – wie unsere Arbeit!"
         ]
+    },
+    "404": {
+        hu: [
+            "Azt az oldalt még a sittkommandó se találja.",
+            "Ez az út zsákutca, haver – fordulj vissza!",
+            "Lehet, hogy ezt a lapot elvitte a lomtalanítás.",
+            "Ez nem a keresett oldal – ez csak egy tévút.",
+            "Nincs itt semmi, csak Dzsoni szomorú feje."
+        ],
+        en: [
+            "Even the junk squad can’t find that page.",
+            "Dead end, buddy – time to turn back!",
+            "Looks like this page got hauled away.",
+            "This ain’t the page you’re looking for.",
+            "Nothing here – just Dzsoni feeling down."
+        ],
+        de: [
+            "Selbst der Mülltrupp findet die Seite nicht.",
+            "Sackgasse, Kumpel – besser umdrehen!",
+            "Diese Seite wurde wohl schon entsorgt.",
+            "Das ist nicht die Seite, die du suchst.",
+            "Nichts hier – nur Dzsonis trauriges Gesicht."
+        ]
     }
 };
