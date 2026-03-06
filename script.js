@@ -1,34 +1,87 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-    attachDzsoniSpeech(); // automatikus minden dzsoni-sticky elemhez
+    attachDzsoniSpeech();
 
     const supported = ['en', 'hu', 'de'];
     const savedLang = localStorage.getItem('lang');
     const parts = window.location.pathname.split('/');
-    const currentLang = parts[1]; // e.g., 'en' from /en/index.html
+    const currentLang = parts[1];
 
-    // Ha a gyökérből jövünk és van mentett nyelv, irányítsuk át
     if (window.location.pathname === '/' && savedLang && supported.includes(savedLang)) {
         window.location.href = `/${savedLang}/index.html`;
         return;
     }
 
-    // Ha nincs mentett nyelv, és támogatott az aktuális, mentsük el
     if (!savedLang && supported.includes(currentLang)) {
         localStorage.setItem('lang', currentLang);
     }
 
-    // Set dropdown érték
     const selector = document.getElementById('language');
     if (selector && supported.includes(currentLang)) {
         selector.value = `/${currentLang}/index.html`;
     }
 
-    // Lefordítjuk az oldalt
     translatePage(currentLang || savedLang || detectBrowserLanguage());
+
+    initLazyAutocomplete();
 });
 
-window.addEventListener('load', initAutocomplete);
+let mapsApiPromise = null;
+let autocompleteInitialized = false;
+
+function loadGoogleMapsPlacesApi() {
+    if (mapsApiPromise) return mapsApiPromise;
+
+    mapsApiPromise = new Promise((resolve, reject) => {
+        if (window.google?.maps?.places) {
+            resolve(window.google);
+            return;
+        }
+
+        const script = document.createElement('script');
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDtA3tWXjkoP4bHuYBYZqZSrwahFRy3gbE&libraries=places';
+        script.async = true;
+        script.defer = true;
+
+        script.onload = () => {
+            if (window.google?.maps?.places) {
+                resolve(window.google);
+            } else {
+                reject(new Error('Google Maps Places API betöltött, de a places nem érhető el.'));
+            }
+        };
+
+        script.onerror = () => reject(new Error('Google Maps API betöltése sikertelen.'));
+        document.head.appendChild(script);
+    });
+
+    return mapsApiPromise;
+}
+
+function initLazyAutocomplete() {
+    const addressInput = document.getElementById('address');
+    if (!addressInput) return;
+
+    const activateAutocomplete = async () => {
+        if (autocompleteInitialized) return;
+
+        try {
+            await loadGoogleMapsPlacesApi();
+
+            new google.maps.places.Autocomplete(addressInput, {
+                types: ['geocode'],
+                componentRestrictions: { country: 'hu' }
+            });
+
+            autocompleteInitialized = true;
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    addressInput.addEventListener('focus', activateAutocomplete, { once: true });
+    addressInput.addEventListener('pointerdown', activateAutocomplete, { once: true });
+    addressInput.addEventListener('touchstart', activateAutocomplete, { once: true });
+}
 
 // A szövegobjektumot a speechtexts.js tölti be globálisan dzsoniSpeechTexts néven
 
@@ -96,14 +149,4 @@ function detectBrowserLanguage() {
     const supported = Object.keys(translations);
     const browserLang = navigator.language.slice(0, 2).toLowerCase();
     return supported.includes(browserLang) ? browserLang : 'en';
-}
-
-function initAutocomplete() {
-    const addressInput = document.getElementById('address');
-    if (addressInput) {
-        new google.maps.places.Autocomplete(addressInput, {
-            types: ["geocode"],
-            componentRestrictions: { country: "hu" },
-        });
-    }
 }
