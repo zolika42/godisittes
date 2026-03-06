@@ -1,23 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     attachDzsoniSpeech();
 
-    const supported = ['en', 'hu', 'de'];
-    const savedLang = localStorage.getItem('lang');
-    const parts = window.location.pathname.split('/');
-    const currentLang = parts[1];
+    var supported = ['en', 'hu', 'de'];
+    var savedLang = localStorage.getItem('lang');
+    var parts = window.location.pathname.split('/');
+    var currentLang = parts[1];
 
-    if (window.location.pathname === '/' && savedLang && supported.includes(savedLang)) {
-        window.location.href = `/${savedLang}/index.html`;
+    if (window.location.pathname === '/' && savedLang && supported.indexOf(savedLang) !== -1) {
+        window.location.href = '/' + savedLang + '/index.html';
         return;
     }
 
-    if (!savedLang && supported.includes(currentLang)) {
+    if (!savedLang && supported.indexOf(currentLang) !== -1) {
         localStorage.setItem('lang', currentLang);
     }
 
-    const selector = document.getElementById('language');
-    if (selector && supported.includes(currentLang)) {
-        selector.value = `/${currentLang}/index.html`;
+    var selector = document.getElementById('language');
+    if (selector && supported.indexOf(currentLang) !== -1) {
+        selector.value = '/' + currentLang + '/index.html';
     }
 
     translatePage(currentLang || savedLang || detectBrowserLanguage());
@@ -25,32 +25,53 @@ document.addEventListener("DOMContentLoaded", () => {
     initLazyAutocomplete();
 });
 
-let mapsApiPromise = null;
-let autocompleteInitialized = false;
+var mapsApiPromise = null;
+var autocompleteInitialized = false;
 
 function loadGoogleMapsPlacesApi() {
-    if (mapsApiPromise) return mapsApiPromise;
+    if (mapsApiPromise) {
+        return mapsApiPromise;
+    }
 
-    mapsApiPromise = new Promise((resolve, reject) => {
-        if (window.google?.maps?.places) {
+    mapsApiPromise = new Promise(function (resolve, reject) {
+        if (window.google && window.google.maps && window.google.maps.places) {
             resolve(window.google);
             return;
         }
 
-        const script = document.createElement('script');
+        var existingScript = document.querySelector('script[data-google-maps="places"]');
+        if (existingScript) {
+            existingScript.addEventListener('load', function () {
+                if (window.google && window.google.maps && window.google.maps.places) {
+                    resolve(window.google);
+                } else {
+                    reject(new Error("Google Maps Places API betoltott, de a places nem erheto el."));
+                }
+            });
+            existingScript.addEventListener('error', function () {
+                reject(new Error("Google Maps API betoltese sikertelen."));
+            });
+            return;
+        }
+
+        var script = document.createElement('script');
         script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDtA3tWXjkoP4bHuYBYZqZSrwahFRy3gbE&libraries=places';
         script.async = true;
         script.defer = true;
+        script.setAttribute('data-google-maps', 'places');
 
-        script.onload = () => {
-            if (window.google?.maps?.places) {
+        script.onload = function () {
+            if (window.google && window.google.maps && window.google.maps.places) {
                 resolve(window.google);
             } else {
-                reject(new Error('Google Maps Places API betöltött, de a places nem érhető el.'));
+                reject(new Error("Google Maps Places API betoltott, de a places nem erheto el."));
             }
         };
 
-        script.onerror = () => reject(new Error('Google Maps API betöltése sikertelen.'));
+        script.onerror = function () {
+            reject(new Error("Google Maps API betoltese sikertelen."));
+        };
+
         document.head.appendChild(script);
     });
 
@@ -58,25 +79,25 @@ function loadGoogleMapsPlacesApi() {
 }
 
 function initLazyAutocomplete() {
-    const addressInput = document.getElementById('address');
+    var addressInput = document.getElementById('address');
     if (!addressInput) return;
 
-    const activateAutocomplete = async () => {
+    function activateAutocomplete() {
         if (autocompleteInitialized) return;
 
-        try {
-            await loadGoogleMapsPlacesApi();
+        loadGoogleMapsPlacesApi()
+            .then(function () {
+                new google.maps.places.Autocomplete(addressInput, {
+                    types: ['geocode'],
+                    componentRestrictions: { country: 'hu' }
+                });
 
-            new google.maps.places.Autocomplete(addressInput, {
-                types: ['geocode'],
-                componentRestrictions: { country: 'hu' }
+                autocompleteInitialized = true;
+            })
+            .catch(function (error) {
+                console.error(error);
             });
-
-            autocompleteInitialized = true;
-        } catch (error) {
-            console.error(error);
-        }
-    };
+    }
 
     addressInput.addEventListener('focus', activateAutocomplete, { once: true });
     addressInput.addEventListener('pointerdown', activateAutocomplete, { once: true });
@@ -109,7 +130,12 @@ function attachDzsoniSpeech(manualId = null, manualKey = null, lang = 'hu') {
 
         const bubble = document.createElement("div");
         bubble.classList.add("speech-bubble");
-        bubble.textContent = translations[lang]?.[key] || key;
+        bubble.textContent =
+    translations &&
+    translations[lang] &&
+    translations[lang][key]
+        ? translations[lang][key]
+        : key;
 
         dzsoni.appendChild(bubble);
 
