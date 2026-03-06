@@ -1107,3 +1107,95 @@ aside, article {
 main.blog blockquote {
     width: 100%;
 }
+
+/* --- Mobile performance patch --- */
+@media (max-width: 768px) {
+    html {
+        min-width: 0;
+    }
+
+    body {
+        /* a teljes oldalas pöttyös háttér mobilon drágább festés */
+        background-image: none;
+        background-size: auto;
+        background-position: 0 0;
+    }
+
+    :root {
+        /* a brutál text-shadow mobilon túl drága */
+        --header-text-shadow: 2px 2px 0 var(--color-black);
+        --link-text-shadow: none;
+    }
+
+    h1,
+    header p,
+    .link-call,
+    .link-email {
+        text-shadow: none !important;
+    }
+
+    /* kevesebb festés és kompozitálás az above-the-fold részen */
+    nav ul,
+    article .container,
+    aside .container,
+    form,
+    .price-item,
+    .contact-bubble,
+    .speech-bubble {
+        box-shadow: none !important;
+    }
+
+    .lang-button,
+    form button,
+    .price-item,
+    .contact-bubble,
+    .dzsoni-in-da-house,
+    #dzsoni-sticky {
+        transition: none !important;
+    }
+
+    #dzsoni-sticky img,
+    .dzsoni-in-da-house img {
+        filter: none !important;
+    }
+
+    .price-item:hover,
+    .contact-bubble:hover,
+    .dzsoni-in-da-house:hover,
+    #dzsoni-sticky:hover {
+        transform: none !important;
+        rotate: 0deg !important;
+        box-shadow: none !important;
+    }
+
+    /* első képernyő gyorsítása */
+    header,
+    nav,
+    article,
+    aside,
+    .page-footer {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    main h2,
+    .faq h4,
+    #contact h2 {
+        transform: none;
+        margin-top: 0;
+        margin-bottom: 1rem !important;
+    }
+
+    /* az első viewport után jövő blokkok ne renderelődjenek azonnal */
+    article:not(:first-of-type),
+    aside:not(:first-of-type) {
+        content-visibility: auto;
+        contain-intrinsic-size: 800px;
+    }
+
+    /* sticky CTA maradhat, de legyen könnyebb */
+    .mobile-cta {
+        box-shadow: none;
+        border-top-width: 2px;
+    }
+}
