@@ -24,7 +24,10 @@
     "jsdom": "^26.1.0",
     "node-fetch": "^2.7.0",
     "puppeteer": "^24.15.0",
-    "table": "^6.9.0",
-    "terser": "^5.43.1"
+    "table": "^6.9.0"
+  },
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "terser": "^5.46.0"
   }
 }
