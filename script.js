@@ -45,17 +45,17 @@ function loadGoogleMapsPlacesApi() {
                 if (window.google && window.google.maps && window.google.maps.places) {
                     resolve(window.google);
                 } else {
-                    reject(new Error('Google Maps Places API betoltott, de a places nem erheto el.'));
+                    reject(new Error("Google Maps Places API betoltott, de a places nem erheto el."));
                 }
             });
             existingScript.addEventListener('error', function () {
-                reject(new Error('Google Maps API betoltese sikertelen.'));
+                reject(new Error("Google Maps API betoltese sikertelen."));
             });
             return;
         }
 
         var script = document.createElement('script');
-        script.src = "https:" + "//maps.googleapis.com/maps/api/js?key=AIzaSyDtA3tWXjkoP4bHuYBYZqZSrwahFRy3gbE&libraries=places";
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDtA3tWXjkoP4bHuYBYZqZSrwahFRy3gbE&libraries=places';
         script.async = true;
         script.defer = true;
         script.setAttribute('data-google-maps', 'places');
@@ -64,12 +64,12 @@ function loadGoogleMapsPlacesApi() {
             if (window.google && window.google.maps && window.google.maps.places) {
                 resolve(window.google);
             } else {
-                reject(new Error('Google Maps Places API betoltott, de a places nem erheto el.'));
+                reject(new Error("Google Maps Places API betoltott, de a places nem erheto el."));
             }
         };
 
         script.onerror = function () {
-            reject(new Error('Google Maps API betoltese sikertelen.'));
+            reject(new Error("Google Maps API betoltese sikertelen."));
         };
 
         document.head.appendChild(script);
@@ -130,12 +130,7 @@ function attachDzsoniSpeech(manualId = null, manualKey = null, lang = 'hu') {
 
         const bubble = document.createElement("div");
         bubble.classList.add("speech-bubble");
-        bubble.textContent =
-    translations &&
-    translations[lang] &&
-    translations[lang][key]
-        ? translations[lang][key]
-        : key;
+        bubble.textContent = translations[lang]?.[key] || key;
 
         dzsoni.appendChild(bubble);
 
