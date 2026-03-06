@@ -97,6 +97,10 @@ if (fs.existsSync("images")) {
     copyFolderRecursive("images", path.join(targetDir, "images"));
     console.log(green("✔ images folder copied."));
 }
+if (fs.existsSync("fonts")) {
+    copyFolderRecursive("fonts", path.join(targetDir, "fonts"));
+    console.log(green("✔ fonts folder copied."));
+}
 
 // 9. Process HTML files
 const rootHtmlFiles = fs.readdirSync(".").filter(file => file.endsWith(".html"));
