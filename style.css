@@ -1111,6 +1111,7 @@ main.blog blockquote {
 /* --- Mobile performance patch --- */
 @media (max-width: 768px) {
     html {
+        overflow-x: hidden;
         min-width: 0;
     }
 
@@ -1188,7 +1189,8 @@ main.blog blockquote {
 
     /* az első viewport után jövő blokkok ne renderelődjenek azonnal */
     article:not(:first-of-type),
-    aside:not(:first-of-type) {
+    aside:not(:first-of-type),
+    section:not(:first-of-type) {
         content-visibility: auto;
         contain-intrinsic-size: 800px;
     }
