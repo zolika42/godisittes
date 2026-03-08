@@ -57,7 +57,7 @@ function loadGoogleMapsPlacesApi() {
         }
 
         var script = document.createElement('script');
-        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDtA3tWXjkoP4bHuYBYZqZSrwahFRy3gbE&libraries=places';
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBdUZ8hQ6M5X1P2dLqBmtpDal8iAkH2_q4&libraries=places';
         script.async = true;
         script.defer = true;
         script.setAttribute('data-google-maps', 'places');
